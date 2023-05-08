@@ -1,0 +1,39 @@
+* {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+
+  width: auto;
+  height: 5rem;
+
+  color: #000000 !important;
+  text-decoration-color: #000000 !important;
+  font-style: italic;
+  background-color: #ffffff;
+}
+
+nav.navbar {
+  width: auto;
+}
+
+div.icon img {
+  height: 56px;
+  width: 56px;
+  border-radius: 10px;
+}
+
+div.icon-border img {
+  border: 1px solid #000000;
+}
+
+div.icon.icon-hover img:hover {
+  background-color: #ffffff;
+}
+
+.lado-esquerdo {
+  padding: 20px;
+  gap: 25px;
+}
