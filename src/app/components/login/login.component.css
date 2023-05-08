@@ -1,0 +1,22 @@
+* {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+section.lado-esquerdo {
+  background-color: #e6e6e6;
+}
+
+div.border {
+  border: 1px solid #000000;
+}
+
+img {
+  height: 47rem;
+  width: 47rem;
+}
+
+section.lado-direito {
+  background-color: #29353c;
+}
