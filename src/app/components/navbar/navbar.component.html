@@ -1,6 +1,5 @@
 <nav class="navbar">
   <div class="lado-esquerdo">
-
     <div class="icon icon-border icon-hover">
       <img src="assets/images/N-1.png" alt="N-1" />
     </div>
@@ -24,6 +23,21 @@
         <img src="assets/images/Contato.png" alt="Contato" />
       </a>
     </div>
+  </div>
 
+  <div class="lado-direito">
+    <div class="icon icon-hover">
+      <a routerLink="carrinho"
+        >qtd. Itens
+        <img src="assets/images/Carrinho.png" alt="Carrinho" />
+      </a>
+    </div>
+
+    <div class="icon icon-hover">
+      <a routerLink="perfil"
+        >Olá, {{ usuario }}
+        <img src="assets/images/Perfil.png" alt="Perfil" />
+      </a>
+    </div>
   </div>
 </nav>
