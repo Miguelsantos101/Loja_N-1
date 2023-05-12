@@ -2,21 +2,24 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 section.lado-esquerdo {
   background-color: #e6e6e6;
-}
-
-div.border {
-  border: 1px solid #000000;
+  height: 100vh;
+  width: 50vw;
 }
 
 img {
-  height: 47rem;
-  width: 47rem;
+  height: 45rem;
+  width: 45rem;
+  border: 1px solid #000000;
 }
 
 section.lado-direito {
   background-color: #29353c;
+  height: 100vh;
+  width: 50vw;
 }
