@@ -3,7 +3,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  padding: 0px;
+  margin: 0px;
 }
 
 section.lado-esquerdo {
@@ -22,4 +23,14 @@ section.lado-direito {
   background-color: #29353c;
   height: 100vh;
   width: 50vw;
+}
+
+div.container {
+  height: 55rem;
+  width: 55rem;
+  border-radius: 10px;
+}
+
+form {
+  flex-direction: column;
 }

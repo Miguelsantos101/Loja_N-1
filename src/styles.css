@@ -1,12 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap');
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+/* @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap'); */
 
 * {
-  font-family: 'IM FELL Double Pica';
-  height: auto;
-  width: auto;
-  padding: 0px;
-  margin: 0px;
+  /* font-family: 'IM FELL Double Pica'; */
   background-color: #E6E6E6;
 }

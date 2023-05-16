@@ -1,17 +1,47 @@
 <main>
   <section class="lado-esquerdo">
-    <div>
+    <div class="container">
       <img src="assets/images/N-1 Logo.svg" alt="N-1 Logo" />
     </div>
   </section>
 
   <section class="lado-direito">
-    <div>
-      <a routerLink="/home">
-        <button class="btn btn-primary">
-          Home
-        </button>
-      </a>
+    <div class="container">
+      <form class="form form-group">
+        <div class="form-label">
+          <label>Login</label>
+        </div>
+
+        <div class="flex-column form-floating p-0">
+          <input
+            class="form-control"
+            id="email"
+            type="text"
+            placeholder="name@example.com"
+          />
+          <label class="form-label" for="email">E-Mail</label>
+        </div>
+
+        <div class="flex-column">
+          <label class="form-label" for="senha">Senha</label>
+          <input class="form-control" id="senha" type="text" />
+        </div>
+
+        <div style="gap: 4rem">
+          <a routerLink="/recuperacao-senha">Esqueceu sua senha?</a>
+          <a routerLink="/cadastro">Crie uma nova conta</a>
+        </div>
+
+        <div>
+          <button class="btn btn-primary btn-block" type="submit">
+            Entrar
+          </button>
+        </div>
+      </form>
     </div>
   </section>
 </main>
+
+<!-- <a routerLink="/home">
+  <button class="btn btn-primary">Home</button>
+</a> -->
