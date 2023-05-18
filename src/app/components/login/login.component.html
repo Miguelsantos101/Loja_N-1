@@ -1,41 +1,40 @@
 <main>
   <section class="lado-esquerdo">
     <div class="container">
-      <img src="assets/images/N-1 Logo.svg" alt="N-1 Logo" />
+      <img class="logo" src="assets/images/N-1_Logo_Redondo.svg" alt="N-1 Logo" />
     </div>
   </section>
 
   <section class="lado-direito">
     <div class="container">
-      <form class="form form-group">
-        <div class="form-label">
-          <label>Login</label>
-        </div>
-
-        <div class="flex-column form-floating p-0">
-          <input
-            class="form-control"
-            id="email"
-            type="text"
-            placeholder="name@example.com"
-          />
-          <label class="form-label" for="email">E-Mail</label>
+      <form class="form form-group" [formGroup]="loginForm" (ngSubmit)="onSubmit();">
+        <div>
+          <h1>Login</h1>
         </div>
 
         <div class="flex-column">
-          <label class="form-label" for="senha">Senha</label>
-          <input class="form-control" id="senha" type="text" />
+          <div>
+            <label class="form-label" for="email">E-Mail</label>
+            <img class="icone" src="assets/images/E-Mail.svg" alt="E-Mail">
+          </div>
+          <input class="form-control" id="email" type="text" formControlName="email" />
         </div>
 
-        <div style="gap: 4rem">
+        <div class="flex-column">
+          <div>
+            <label class="form-label" for="senha">Senha</label>
+            <img class="icone" src="assets/images/Cadeado.svg" alt="Senha">
+          </div>
+          <input class="form-control" id="senha" type="text" formControlName="senha"/>
+        </div>
+
+        <div class="links">
           <a routerLink="/recuperacao-senha">Esqueceu sua senha?</a>
           <a routerLink="/cadastro">Crie uma nova conta</a>
         </div>
 
         <div>
-          <button class="btn btn-primary btn-block" type="submit">
-            Entrar
-          </button>
+          <button class="btn primario" type="submit">Entrar</button>
         </div>
       </form>
     </div>

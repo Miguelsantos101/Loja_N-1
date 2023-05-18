@@ -8,7 +8,7 @@
   border: 0px;
 }
 
-section.lado-esquerdo {
+section.lado-direito {
   background-color: #e6e6e6;
   height: 100vh;
   width: 50vw;
@@ -20,7 +20,7 @@ img.logo {
   border: 1px solid #000000;
 }
 
-section.lado-direito {
+section.lado-esquerdo {
   background-color: #29353c;
   height: 100vh;
   width: 50vw;
