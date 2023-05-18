@@ -11,8 +11,6 @@ import { slideInAnimation } from './animations';
   ]
 })
 export class AppComponent {
-  usuarioLogado: boolean = false;
-
   constructor(private contexts: ChildrenOutletContexts) {}
 
   getRouteAnimationData() {
