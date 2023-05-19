@@ -1,13 +1,21 @@
 <main>
   <section class="lado-esquerdo">
     <div class="container">
-      <img class="logo" src="assets/images/N-1_Logo_Redondo.svg" alt="N-1 Logo" />
+      <img
+        class="logo"
+        src="assets/images/N-1_Logo_Redondo.svg"
+        alt="N-1 Logo"
+      />
     </div>
   </section>
 
   <section class="lado-direito">
     <div class="container">
-      <form class="form form-group" [formGroup]="loginForm" (ngSubmit)="onSubmit();">
+      <form
+        class="form form-group"
+        [formGroup]="loginForm"
+        (ngSubmit)="onSubmit()"
+      >
         <div>
           <h1>Login</h1>
         </div>
@@ -15,17 +23,27 @@
         <div class="flex-column">
           <div>
             <label class="form-label" for="email">E-Mail</label>
-            <img class="icone" src="assets/images/E-Mail.svg" alt="E-Mail">
+            <img class="icone" src="assets/images/E-Mail.svg" alt="E-Mail" />
           </div>
-          <input class="form-control" id="email" type="text" formControlName="email" />
+          <input
+            class="form-control"
+            id="email"
+            type="text"
+            formControlName="email"
+          />
         </div>
 
         <div class="flex-column">
           <div>
             <label class="form-label" for="senha">Senha</label>
-            <img class="icone" src="assets/images/Cadeado.svg" alt="Senha">
+            <img class="icone" src="assets/images/Cadeado.svg" alt="Senha" />
           </div>
-          <input class="form-control" id="senha" type="text" formControlName="senha"/>
+          <input
+            class="form-control"
+            id="senha"
+            type="text"
+            formControlName="senha"
+          />
         </div>
 
         <div class="links">

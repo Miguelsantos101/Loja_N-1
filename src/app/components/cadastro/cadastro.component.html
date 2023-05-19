@@ -1,13 +1,92 @@
 <main>
   <section class="lado-esquerdo">
     <div class="container">
+      <form
+        class="form form-group"
+        [formGroup]="cadastroForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <div>
+          <h1>Cadastro</h1>
+        </div>
 
+        <div class="flex-column">
+          <div>
+            <label class="form-label" for="email">Nome</label>
+            <img class="icone" src="assets/images/Perfil.svg" alt="Nome" />
+          </div>
+          <input
+            class="form-control"
+            id="nome"
+            type="text"
+            formControlName="nome"
+          />
+        </div>
+
+        <div class="flex-column">
+          <div>
+            <label class="form-label" for="email">E-Mail</label>
+            <img class="icone" src="assets/images/E-Mail.svg" alt="E-Mail" />
+          </div>
+          <input
+            class="form-control"
+            id="email"
+            type="text"
+            formControlName="email"
+          />
+        </div>
+
+        <div class="flex-column">
+          <div>
+            <label class="form-label" for="senha">Senha</label>
+            <img class="icone" src="assets/images/Cadeado.svg" alt="Senha" />
+          </div>
+          <input
+            class="form-control"
+            id="senha"
+            type="text"
+            formControlName="senha"
+          />
+        </div>
+
+        <div class="flex-column">
+          <div>
+            <label class="form-label" for="confirmaSenha"
+              >Confirmar senha</label
+            >
+            <img
+              class="icone"
+              src="assets/images/Chave.svg"
+              alt="Confirmar senha"
+            />
+          </div>
+          <input
+            class="form-control"
+            id="confirmaSenha"
+            type="text"
+            formControlName="confirmaSenha"
+          />
+        </div>
+
+        <div>
+          <button class="btn primario" type="submit">Criar nova conta</button>
+        </div>
+
+        <div class="link">
+          <p>Já possui uma conta?</p>
+          <a routerLink="/login">Clique para fazer login :)</a>
+        </div>
+      </form>
     </div>
   </section>
 
   <section class="lado-direito">
     <div class="container">
-      <img class="logo" src="assets/images/N-1_Logo_Quadrado.svg" alt="N-1 Logo" />
+      <img
+        class="logo"
+        src="assets/images/N-1_Logo_Quadrado.svg"
+        alt="N-1 Logo"
+      />
     </div>
   </section>
 </main>

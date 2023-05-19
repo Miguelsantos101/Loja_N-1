@@ -1,13 +1,47 @@
 <main>
   <section class="lado-esquerdo">
     <div class="container">
+      <form
+        class="form form-group"
+        [formGroup]="recuperaSenhaForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <div>
+          <h1>Recuperação de senha</h1>
+        </div>
 
+        <p>
+          Para recuperar sua senha, informe seu endereço de e-mail<br />
+          que nós enviaremos um link para a alteração da senha.
+        </p>
+
+        <div class="flex-column">
+          <div>
+            <label class="form-label" for="email">E-Mail</label>
+            <img class="icone" src="assets/images/E-Mail.svg" alt="E-Mail" />
+          </div>
+          <input
+            class="form-control"
+            id="email"
+            type="text"
+            formControlName="email"
+          />
+        </div>
+
+        <div>
+          <button class="btn primario" type="submit">Enviar</button>
+        </div>
+      </form>
     </div>
   </section>
 
   <section class="lado-direito">
     <div class="container">
-      <img class="logo" src="assets/images/N-1_Logo_Quadrado.svg" alt="N-1 Logo" />
+      <img
+        class="logo"
+        src="assets/images/N-1_Logo_Quadrado.svg"
+        alt="N-1 Logo"
+      />
     </div>
   </section>
 </main>
