@@ -28,12 +28,12 @@ div.icon.icon-hover img:hover {
   background-color: none;
 }
 
-.lado-esquerdo {
+.left-side {
   padding: 0.5rem;
   gap: 1.5rem;
 }
 
-.lado-direito {
+.right-side {
   padding: 0.5rem;
   gap: 5rem;
 }

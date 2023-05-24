@@ -8,7 +8,7 @@
   border: 0px;
 }
 
-section.lado-direito {
+section.right-side {
   background-color: #e6e6e6;
   height: 100vh;
   width: 50vw;
@@ -20,7 +20,7 @@ img.logo {
   border: 1px solid #000000;
 }
 
-section.lado-esquerdo {
+section.left-side {
   background-color: #29353c;
   height: 100vh;
   width: 50vw;
@@ -37,7 +37,7 @@ form {
   gap: 1rem;
 }
 
-button.primario {
+button.primary {
   width: 100%;
   color: #ffffff;
   background-color: #44576d;
@@ -64,7 +64,7 @@ input {
   text-decoration-line: underline;
 }
 
-img.icone {
+img.icon {
   width: 2rem;
   height: 2rem;
 }

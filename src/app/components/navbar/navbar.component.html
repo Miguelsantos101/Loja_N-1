@@ -1,5 +1,5 @@
-<nav *ngIf="usuarioLogado" class="navbar">
-  <div class="lado-esquerdo">
+<nav *ngIf="isLoggedIn" class="navbar">
+  <div class="left-side">
     <div class="icon icon-hover icon-border">
       <img src="assets/images/N-1_Logo.svg" alt="N-1" />
     </div>
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <div class="lado-direito">
+  <div class="right-side">
     <div class="icon icon-hover">
       <a routerLink="carrinho"
         >qtd. Itens
@@ -34,8 +34,8 @@
     </div>
 
     <div class="icon icon-hover">
-      <a routerLink="/login"
-        >Olá, {{ usuario }}
+      <a routerLink="perfil"
+        >Olá, {{ user }}
         <img src="assets/images/Perfil.svg" alt="Perfil" />
       </a>
     </div>

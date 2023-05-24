@@ -10,15 +10,28 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { RecuperacaoSenhaComponent } from './components/recuperacao-senha/recuperacao-senha.component';
+import { PesquisarComponent } from './components/pesquisar/pesquisar.component';
+import { ContatoComponent } from './components/contato/contato.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, NavbarComponent, HomeComponent, CadastroComponent, RecuperacaoSenhaComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    NavbarComponent,
+    HomeComponent,
+    CadastroComponent,
+    RecuperacaoSenhaComponent,
+    PesquisarComponent,
+    ContatoComponent,
+    PerfilComponent,
+  ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
