@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { PesquisarComponent } from './components/pesquisar/pesquisar.component';
 import { ContatoComponent } from './components/contato/contato.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { RecuperacaoSenhaComponent } from './components/recuperacao-senha/recuperacao-senha.component';
-import { authGuard } from './shared/guards/auth.guard';
+import { authGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -48,7 +49,7 @@ const routes: Routes = [
     component: LoginComponent,
     data: { animation: 'login' },
   },
-  { path: '', title: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '*', title: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 
 @NgModule({

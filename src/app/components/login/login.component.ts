@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { User } from 'src/app/model/user.model';
+import { UserService } from 'src/app/services/user.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,11 +13,23 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent {
   loginForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  constructor(
+    private router: Router,
+    private formBuilder: FormBuilder,
+    private userService: UserService
+  ) {
+    if (this.userService.isLoggedIn()) {
+      this.router.navigate(['home']);
+    }
+  }
 
   ngOnInit(): void {
+    this.createForm();
+  }
+
+  createForm(): void {
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       senha: ['', [Validators.required]],
     });
   }
@@ -25,11 +40,11 @@ export class LoginComponent {
 
   login(): void {
     if (this.loginForm.valid) {
-      alert('Logado com sucesso');
+      var dtoUser = new User(this.loginForm.value);
+      this.userService.logIn(dtoUser);
     }
 
-    localStorage.setItem('token', 'token_valido');
     this.loginForm.reset();
-    this.router.navigate(['/home']);
+    this.router.navigate(['home']);
   }
 }

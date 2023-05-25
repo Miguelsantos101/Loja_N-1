@@ -1,4 +1,4 @@
-<nav *ngIf="isLoggedIn" class="navbar">
+<nav *ngIf="userService.loggedIn | async" class="navbar">
   <div class="left-side">
     <div class="icon icon-hover icon-border">
       <img src="assets/images/N-1_Logo.svg" alt="N-1" />
