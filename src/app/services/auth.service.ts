@@ -9,7 +9,7 @@ export class AuthService {
   constructor() {}
 
   canActivate() {
-    if (inject(UserService).loggedIn) {
+    if (inject(UserService).isLoggedIn()) {
       return true;
     } else {
       inject(UserService).logOut();

@@ -48,7 +48,7 @@ export const slideInAnimation = trigger('routeAnimations', [
       ],
       { optional: true }
     ),
-    query(':enter', [style({ left: '-100%' })], { optional: true }),
+    query(':enter', [style({ left: '+100%' })], { optional: true }),
     query(':leave', animateChild(), { optional: true }),
     group([
       query(

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, map } from 'rxjs';
 
 import { AppService } from './app.service';
-import { User } from '../model/user.model';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root',
@@ -27,6 +27,16 @@ export class UserService {
   }
 
   logIn(user: User): Observable<any> {
+    // Remover essa parte depois
+    let teste = true;
+
+    if (teste) {
+      this._loggedIn.next(true);
+      sessionStorage.setItem('auth_token', '12345');
+      let a: Observable<any> = new Observable<boolean>();
+      return a;
+    }
+
     return this.appService.postItems('', user).pipe(
       map((response: any) => {
         var data = response;
