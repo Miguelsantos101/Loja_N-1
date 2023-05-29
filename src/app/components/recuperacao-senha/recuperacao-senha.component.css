@@ -37,8 +37,9 @@ form {
   gap: 1rem;
 }
 
+a.primary,
 button.primary {
-  width: 100%;
+  width: inherit;
   color: #ffffff;
   background-color: #44576d;
   height: 2.5rem;
@@ -51,7 +52,7 @@ div {
 
 input {
   height: 2.5rem;
-  background-color: #768A96;
+  background-color: #768a96;
 }
 
 .links {
@@ -67,4 +68,8 @@ input {
 img.icon {
   width: 2rem;
   height: 2rem;
+}
+
+div.gap {
+  gap: 1rem;
 }

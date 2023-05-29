@@ -4,7 +4,7 @@
       <form
         class="form form-group"
         [formGroup]="cadastroForm"
-        (ngSubmit)="onSubmit()"
+        (ngSubmit)="createAccount()"
       >
         <div>
           <h1>Cadastro</h1>
@@ -44,7 +44,7 @@
           <input
             class="form-control"
             id="senha"
-            type="text"
+            type="password"
             formControlName="senha"
           />
         </div>
@@ -63,7 +63,7 @@
           <input
             class="form-control"
             id="confirmaSenha"
-            type="text"
+            type="password"
             formControlName="confirmaSenha"
           />
         </div>

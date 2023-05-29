@@ -4,7 +4,7 @@
       <form
         class="form form-group"
         [formGroup]="recuperaSenhaForm"
-        (ngSubmit)="onSubmit()"
+        (ngSubmit)="sendEmail()"
       >
         <div>
           <h1>Recuperação de senha</h1>
@@ -15,21 +15,23 @@
           que nós enviaremos um link para a alteração da senha.
         </p>
 
-        <div class="flex-column">
-          <div>
-            <label class="form-label" for="email">E-Mail</label>
-            <img class="icon" src="assets/images/E-Mail.svg" alt="E-Mail" />
+        <div class="flex-column gap">
+          <div class="flex-column">
+            <div>
+              <label class="form-label" for="email">E-Mail</label>
+              <img class="icon" src="assets/images/E-Mail.svg" alt="E-Mail" />
+            </div>
+            <input
+              class="form-control"
+              id="email"
+              type="text"
+              formControlName="email"
+            />
           </div>
-          <input
-            class="form-control"
-            id="email"
-            type="text"
-            formControlName="email"
-          />
-        </div>
-
-        <div>
-          <button class="btn primary" type="submit">Enviar</button>
+          <div class="gap">
+            <a class="btn primary" routerLink="/login">Voltar</a>
+            <button class="btn primary" type="submit">Enviar</button>
+          </div>
         </div>
       </form>
     </div>

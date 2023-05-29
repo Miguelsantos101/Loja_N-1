@@ -14,7 +14,7 @@
       <form
         class="form form-group"
         [formGroup]="loginForm"
-        (ngSubmit)="onSubmit()"
+        (ngSubmit)="login()"
       >
         <div>
           <h1>Login</h1>
@@ -38,12 +38,25 @@
             <label class="form-label" for="senha">Senha</label>
             <img class="icon" src="assets/images/Cadeado.svg" alt="Senha" />
           </div>
-          <input
-            class="form-control"
-            id="senha"
-            type="password"
-            formControlName="senha"
-          />
+          <div>
+            <input
+              class="form-control"
+              id="senha"
+              [type]="showPassword ? 'text' : 'password'"
+              formControlName="senha"
+            />
+            <a class="eye password" (click)="showOrHidePassword()">
+              <img
+                class="icon2"
+                [src]="
+                  showPassword
+                    ? 'assets/images/Olho-fechado.svg'
+                    : 'assets/images/Olho-aberto.svg'
+                "
+                [alt]="showPassword ? 'Olho fechado' : 'Olho aberto'"
+              />
+            </a>
+          </div>
         </div>
 
         <div class="links">
