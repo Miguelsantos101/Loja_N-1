@@ -1,5 +1,21 @@
 * {
   display: flex;
+  flex: 1 0 20%;
   flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap;
+  margin: 0rem;
+  padding: 0rem;
+  border: 0rem;
+  gap: 0rem;
+}
+
+div.main {
+  padding: 3rem;
+  width: 100vh;
+  height: calc(100vh - 5rem);
+}
+
+div.shop-item {
+  max-width: calc(100vw / 5 - 1.2rem);
+  max-height: calc((100vh - 8rem) / 3);
 }

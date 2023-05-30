@@ -1,3 +1,10 @@
-<p>home works!</p>
-
-<button (click)="logOut()" class="btn btn-primary">Sair</button>
+<main>
+  <div class="main">
+    <div class="shop-item" *ngFor="let shopItem of shopItems">
+      <div class="shop-item">
+        {{ shopItem }}
+      </div>
+    </div>
+  </div>
+  <!-- <button (click)="logOut()" class="btn btn-primary">Sair</button> -->
+</main>

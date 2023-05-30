@@ -8,3 +8,8 @@
   box-sizing: border-box;
   background-color: #e6e6e6;
 }
+
+.form-control:focus {
+  border-color: none;
+  box-shadow: none;
+}
