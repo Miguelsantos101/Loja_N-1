@@ -35,6 +35,7 @@ export class LoginComponent {
     });
   }
 
+  // Refatorar esse códgo depois kk
   formValid(): boolean {
     if (!this.loginForm.valid) {
       if (
@@ -66,6 +67,7 @@ export class LoginComponent {
           this.router.navigate(['home']);
         }
       });
+      this.router.navigate(['home']);
     }
   }
 

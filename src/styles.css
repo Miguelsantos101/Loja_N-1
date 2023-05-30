@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap'); */
 
-* {
-  /* font-family: 'IM FELL Double Pica'; */
-  background-color: #E6E6E6;
+*,
+*::before,
+*::after {
+  /* font-family: "IM Fell DW Pica", serif; */
+  box-sizing: border-box;
+  background-color: #e6e6e6;
 }
