@@ -41,7 +41,7 @@ export class LoginComponent {
         !this.loginForm.controls['email'].valid &&
         !this.loginForm.controls['senha'].valid
       ) {
-        alert('Preencha os campos antes de continuar');
+        alert('Preencha todos os campos corretamente antes de continuar');
         return false;
       }
 
@@ -60,9 +60,12 @@ export class LoginComponent {
 
   login(): void {
     if (this.formValid()) {
-      var dtoUser = new User(this.loginForm.value);
-      this.userService.logIn(dtoUser);
-      this.router.navigate(['home']);
+      var dtoUser: User = new User(this.loginForm.value);
+      this.userService.logIn(dtoUser).subscribe((data) => {
+        if (data) {
+          this.router.navigate(['home']);
+        }
+      });
     }
   }
 

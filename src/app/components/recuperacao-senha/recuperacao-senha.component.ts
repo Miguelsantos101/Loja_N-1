@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import { UserService } from 'src/app/services/user.service';
+import { PasswordRecovery } from 'src/app/models/password-recovery.model';
+
 @Component({
   selector: 'app-recuperacao-senha',
   templateUrl: './recuperacao-senha.component.html',
@@ -10,7 +13,11 @@ import { Router } from '@angular/router';
 export class RecuperacaoSenhaComponent {
   recuperaSenhaForm: FormGroup = this.formBuilder.group({});
 
-  constructor(private formBuilder: FormBuilder, private router: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private userService: UserService
+  ) {}
 
   ngOnInit(): void {
     this.createForm();
@@ -24,6 +31,7 @@ export class RecuperacaoSenhaComponent {
 
   formValid(): boolean {
     if (!this.recuperaSenhaForm.valid) {
+      alert('Por favor verifique o campo de email');
       return false;
     }
 
@@ -32,6 +40,10 @@ export class RecuperacaoSenhaComponent {
 
   sendEmail(): void {
     if (this.formValid()) {
+      var dtoPasswordRecovery: PasswordRecovery = new PasswordRecovery(
+        this.recuperaSenhaForm.value
+      );
+      this.userService.passwordRecovery(dtoPasswordRecovery);
       this.router.navigate(['/login']);
     }
   }

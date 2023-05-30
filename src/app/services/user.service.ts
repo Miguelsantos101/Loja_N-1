@@ -5,6 +5,8 @@ import { BehaviorSubject, Observable, map } from 'rxjs';
 
 import { AppService } from './app.service';
 import { User } from '../models/user.model';
+import { Register } from '../models/register.model';
+import { PasswordRecovery } from '../models/password-recovery.model';
 
 @Injectable({
   providedIn: 'root',
@@ -53,5 +55,23 @@ export class UserService {
     sessionStorage.removeItem('auth_token');
     this.isLoggedIn();
     this.router.navigate(['login']);
+  }
+
+  register(register: Register): Observable<any> {
+    return this.appService.postItems('', register).pipe(
+      map((response: any) => {
+        var data = response;
+        return data;
+      })
+    );
+  }
+
+  passwordRecovery(passwordRecovery: PasswordRecovery): Observable<any> {
+    return this.appService.postItems('', passwordRecovery).pipe(
+      map((response: any) => {
+        var data = response;
+        return data;
+      })
+    );
   }
 }

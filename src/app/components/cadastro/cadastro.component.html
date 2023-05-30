@@ -41,12 +41,25 @@
             <label class="form-label" for="senha">Senha</label>
             <img class="icon" src="assets/images/Cadeado.svg" alt="Senha" />
           </div>
-          <input
-            class="form-control"
-            id="senha"
-            type="password"
-            formControlName="senha"
-          />
+          <div>
+            <input
+              class="form-control"
+              id="senha"
+              [type]="showPassword ? 'text' : 'password'"
+              formControlName="senha"
+            />
+            <a class="eye password" (click)="showOrHidePassword(1)">
+              <img
+                class="icon2"
+                [src]="
+                  showPassword
+                    ? 'assets/images/Olho-fechado.svg'
+                    : 'assets/images/Olho-aberto.svg'
+                "
+                [alt]="showPassword ? 'Olho fechado' : 'Olho aberto'"
+              />
+            </a>
+          </div>
         </div>
 
         <div class="flex-column">
@@ -60,12 +73,27 @@
               alt="Confirmar senha"
             />
           </div>
-          <input
-            class="form-control"
-            id="confirmaSenha"
-            type="password"
-            formControlName="confirmaSenha"
-          />
+          <div>
+            <input
+              class="form-control"
+              id="confirmaSenha"
+              [type]="showPasswordConfirmation ? 'text' : 'password'"
+              formControlName="confirmaSenha"
+            />
+            <a class="eye password" (click)="showOrHidePassword(2)">
+              <img
+                class="icon2"
+                [src]="
+                  showPasswordConfirmation
+                    ? 'assets/images/Olho-fechado.svg'
+                    : 'assets/images/Olho-aberto.svg'
+                "
+                [alt]="
+                  showPasswordConfirmation ? 'Olho fechado' : 'Olho aberto'
+                "
+              />
+            </a>
+          </div>
         </div>
 
         <div>
