@@ -1,42 +1,37 @@
 <nav *ngIf="userService.loggedIn | async" class="navbar">
   <div class="left-side">
     <div class="icon icon-hover icon-border">
-      <img src="assets/images/N-1_Logo.svg" alt="N-1" />
+      <img src="../../../../assets/images/N-1_Logo.svg" alt="N-1" />
     </div>
 
     <div class="icon icon-hover">
-      <a routerLink="home"
-        >Home
-        <img src="assets/images/Home.svg" alt="Home" />
+      <a routerLink="home">Home
+        <img src="../../../../assets/images/Home.svg" alt="Home" />
       </a>
     </div>
 
     <div class="icon icon-hover">
-      <a routerLink="pesquisar"
-        >Pesquisar <img src="assets/images/Lupa.svg" alt="Lupa" />
+      <a routerLink="pesquisar">Pesquisar <img src="../../../../assets/images/Lupa.svg" alt="Lupa" />
       </a>
     </div>
 
     <div class="icon icon-hover">
-      <a routerLink="contato"
-        >Contato
-        <img src="assets/images/Contato.svg" alt="Contato" />
+      <a routerLink="contato">Contato
+        <img src="../../../../assets/images/Contato.svg" alt="Contato" />
       </a>
     </div>
   </div>
 
   <div class="right-side">
     <div class="icon icon-hover">
-      <a routerLink=""
-        >qtd. Itens
-        <img src="assets/images/Carrinho.svg" alt="Carrinho" />
+      <a routerLink="">qtd. Itens
+        <img src="../../../../assets/images/Carrinho.svg" alt="Carrinho" />
       </a>
     </div>
 
     <div class="icon icon-hover">
-      <a routerLink="perfil"
-        >Olá, {{ user }}
-        <img src="assets/images/Perfil.svg" alt="Perfil" />
+      <a routerLink="perfil">Olá, {{ user }}
+        <img src="../../../../assets/images/Perfil.svg" alt="Perfil" />
       </a>
     </div>
   </div>

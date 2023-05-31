@@ -3,19 +3,27 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { LoginComponent } from './login.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { RecuperacaoSenhaComponent } from './recuperar-senha/recuperacao-senha.component';
+import { LoginRoutingModule } from './login-routing.module';
 
 
 
 @NgModule({
   declarations: [
-    LoginComponent
+    LoginComponent,
+    CadastroComponent,
+    RecuperacaoSenhaComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    LoginRoutingModule
   ],
   exports: [
-    LoginComponent
+    LoginComponent,
+    CadastroComponent,
+    RecuperacaoSenhaComponent
   ]
 })
 export class LoginModule { }

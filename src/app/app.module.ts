@@ -9,8 +9,6 @@ import { SharedModule } from './components/shared/shared.module';
 
 import { LoginModule } from './modules/login/login.module';
 import { HomeModule } from './modules/home/home.module';
-import { RecuperarSenhaModule } from './modules/recuperar-senha/recuperar-senha.module';
-import { CadastroModule } from './modules/cadastro/cadastro.module';
 import { PerfilModule } from './modules/perfil/perfil.module';
 import { PesquisarModule } from './modules/pesquisar/pesquisar.module';
 import { ContatoModule } from './modules/contato/contato.module';
@@ -33,8 +31,6 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     LoginModule,
     HomeModule,
-    CadastroModule,
-    RecuperarSenhaModule,
     PerfilModule,
     PesquisarModule,
     ContatoModule,
