@@ -5,37 +5,42 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { SharedModule } from './components/shared/shared.module';
+
+import { LoginModule } from './modules/login/login.module';
+import { HomeModule } from './modules/home/home.module';
+import { RecuperarSenhaModule } from './modules/recuperar-senha/recuperar-senha.module';
+import { CadastroModule } from './modules/cadastro/cadastro.module';
+import { PerfilModule } from './modules/perfil/perfil.module';
+import { PesquisarModule } from './modules/pesquisar/pesquisar.module';
+import { ContatoModule } from './modules/contato/contato.module';
+
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';
-import { CadastroComponent } from './components/cadastro/cadastro.component';
-import { RecuperacaoSenhaComponent } from './components/recuperacao-senha/recuperacao-senha.component';
-import { PesquisarComponent } from './components/pesquisar/pesquisar.component';
-import { ContatoComponent } from './components/contato/contato.component';
-import { PerfilComponent } from './components/perfil/perfil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    NavbarComponent,
-    HomeComponent,
-    CadastroComponent,
-    RecuperacaoSenhaComponent,
-    PesquisarComponent,
-    ContatoComponent,
-    PerfilComponent,
   ],
   imports: [
-    AppRoutingModule,
+    // modulos angular
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+
+    // modulos da aplicação
+    AppRoutingModule,
+    LoginModule,
+    HomeModule,
+    CadastroModule,
+    RecuperarSenhaModule,
+    PerfilModule,
+    PesquisarModule,
+    ContatoModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

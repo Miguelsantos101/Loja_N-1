@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { LoginComponent } from './components/login/login.component';
-import { HomeComponent } from './components/home/home.component';
-import { PesquisarComponent } from './components/pesquisar/pesquisar.component';
-import { ContatoComponent } from './components/contato/contato.component';
-import { PerfilComponent } from './components/perfil/perfil.component';
-import { CadastroComponent } from './components/cadastro/cadastro.component';
-import { RecuperacaoSenhaComponent } from './components/recuperacao-senha/recuperacao-senha.component';
 import { authGuard } from './guard/auth.guard';
+
+import { LoginComponent } from './modules/login/login.component';
+import { HomeComponent } from './modules/home/home.component';
+import { CadastroComponent } from './modules/cadastro/cadastro.component';
+import { RecuperacaoSenhaComponent } from './modules/recuperar-senha/recuperacao-senha.component';
+import { PerfilComponent } from './modules/perfil/perfil.component';
+import { PesquisarComponent } from './modules/pesquisar/pesquisar.component';
+import { ContatoComponent } from './modules/contato/contato.component';
+
 
 const routes: Routes = [
   {
@@ -65,4 +67,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
