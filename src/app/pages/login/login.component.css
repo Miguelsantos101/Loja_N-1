@@ -1,5 +1,8 @@
-* {
+main {
   display: flex;
+  margin-top: 80px;
+}
+/* * {
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -7,6 +10,7 @@
   margin: 0px;
   border: 0px;
 }
+
 
 section.left-side {
   background-color: #e6e6e6;
@@ -83,4 +87,4 @@ img.icon2 {
 a.eye {
   border-radius: 10px;
   cursor: pointer;
-}
+} */

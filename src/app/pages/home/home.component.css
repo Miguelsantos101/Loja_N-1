@@ -9,6 +9,10 @@
   gap: 0rem;
 }
 
+main {
+  margin-top: 100px;
+}
+
 div.main {
   padding: 3rem;
   width: 100vh;

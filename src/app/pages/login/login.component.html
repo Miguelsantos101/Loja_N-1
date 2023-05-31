@@ -1,12 +1,56 @@
 <main>
-  <section class="left-side">
+  <section>
+    <div class="container">
+      <img class="logo" src="../../../../assets/images/N-1_Logo_Redondo.svg" alt="N-1 Logo" width="500rem" />
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <form action="">
+        <h1>Login</h1>
+      </form>
+
+      <div class="mb-3">
+        <label class="form-label" for="email">E-Mail</label>
+        <input class="form-control" id="email" type="text" formControlName="email" placeholder="E-mail"
+          aria-label="email" />
+      </div>
+
+      <label class="form-label" for="senha">Senha</label>
+      <div class="d-flex mb-3">
+        <input type="password" class="form-control" placeholder="Senha" aria-label="Senha" id="senha"
+          [type]="showPassword ? 'text' : 'password'" formControlName="senha" />
+        <img [src]="showPassword ? '../../../assets/images/Olho-fechado.svg' : '../../../assets/images/Olho-aberto.svg'"
+          [alt]="showPassword ? 'Olho fechado' : 'Olho aberto'" width="38px" (click)="showOrHidePassword()" />
+        <i class="bi bi-eye-slash"></i>
+      </div>
+
+
+      <!-- <div class="flex-column">
+        <div>
+
+        </div>
+        <div>
+          <input class="form-control input-password" id="senha" [type]="showPassword ? 'text' : 'password'"
+            formControlName="senha" />
+          <a class="eye password" >
+
+          </a>
+        </div>
+      </div> -->
+
+
+    </div>
+  </section>
+  <!-- <section class="left-side">
     <div class="container">
       <img class="logo" src="../../../../assets/images/N-1_Logo_Redondo.svg" alt="N-1 Logo" />
     </div>
   </section>
 
   <section class="right-side">
-    <div class="container">
+    <div class="container p-4">
       <form class="form form-group" [formGroup]="loginForm" (ngSubmit)="login()">
         <div>
           <h1>Login</h1>
@@ -48,5 +92,5 @@
         </div>
       </form>
     </div>
-  </section>
+  </section> -->
 </main>

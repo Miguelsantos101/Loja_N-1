@@ -26,6 +26,7 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.createForm();
+    this.showOrHidePassword();
   }
 
   createForm(): void {

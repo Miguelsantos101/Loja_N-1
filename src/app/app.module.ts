@@ -7,11 +7,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './components/shared/shared.module';
 
-import { LoginModule } from './modules/login/login.module';
-import { HomeModule } from './modules/home/home.module';
-import { PerfilModule } from './modules/perfil/perfil.module';
-import { PesquisarModule } from './modules/pesquisar/pesquisar.module';
-import { ContatoModule } from './modules/contato/contato.module';
+import { LoginModule } from './pages/login/login.module';
+import { HomeModule } from './pages/home/home.module';
+import { PerfilModule } from './pages/perfil/perfil.module';
+import { PesquisarModule } from './pages/pesquisar/pesquisar.module';
+import { ContatoModule } from './pages/contato/contato.module';
 
 import { AppComponent } from './app.component';
 

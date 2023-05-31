@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { authGuard } from './guard/auth.guard';
 
-import { HomeComponent } from './modules/home/home.component';
-import { PerfilComponent } from './modules/perfil/perfil.component';
-import { PesquisarComponent } from './modules/pesquisar/pesquisar.component';
-import { ContatoComponent } from './modules/contato/contato.component';
+import { HomeComponent } from './pages/home/home.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
+import { PesquisarComponent } from './pages/pesquisar/pesquisar.component';
+import { ContatoComponent } from './pages/contato/contato.component';
 
 
 const routes: Routes = [
