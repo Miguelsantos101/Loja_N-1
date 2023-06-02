@@ -26,7 +26,6 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.createForm();
-    this.showOrHidePassword();
   }
 
   createForm(): void {
@@ -36,7 +35,7 @@ export class LoginComponent {
     });
   }
 
-  // Refatorar esse códgo depois kk
+  // Refatorar esse código depois kk
   formValid(): boolean {
     if (!this.loginForm.valid) {
       if (
