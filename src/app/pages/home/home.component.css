@@ -1,12 +1,11 @@
 * {
   display: flex;
   flex: 1 0 20%;
-  flex-direction: row;
   flex-wrap: wrap;
   margin: 0rem;
   padding: 0rem;
   border: 0rem;
-  gap: 0rem;
+  color: #fff;
 }
 
 main {
@@ -15,11 +14,59 @@ main {
 
 div.main {
   padding: 3rem;
-  width: 100vh;
   height: calc(100vh - 5rem);
 }
 
 div.shop-item {
   max-width: calc(100vw / 5 - 1.2rem);
   max-height: calc((100vh - 8rem) / 3);
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #44576d;
+  margin: 1rem;
+  border-radius: 10px;
+  width: inherit;
+}
+
+div.top {
+  flex: 1 0 40%;
+  align-items: center;
+  justify-content: center;
+  background-color: #44576d;
+}
+
+div.middle {
+  flex: 1 0 45%;
+  flex-direction: column;
+  background-color: #768a96;
+}
+
+div.middle div.price {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+div.text {
+  align-items: center;
+  flex-direction: column;
+  background-color: #768a96;
+}
+
+div.price {
+  margin: 8px;
+  align-items: flex-end;
+  background-color: #768a96;
+}
+
+div.bottom {
+  flex: 1 0 15%;
+  background-color: #44576d;
+}
+
+div.top,
+div.bottom {
+  border-radius: 10px;
 }

@@ -8,6 +8,10 @@
   border: 0px;
 }
 
+main {
+  margin-top: 80px;
+}
+
 section.right-side {
   background-color: #e6e6e6;
   height: 100vh;

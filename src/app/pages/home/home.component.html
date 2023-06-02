@@ -1,8 +1,22 @@
 <main>
   <div class="main">
     <div class="shop-item" *ngFor="let shopItem of shopItems">
-      <div class="shop-item">
-        {{ shopItem }}
+      <div class="container">
+        <div class="top">
+          {{ shopItem.image }}
+        </div>
+        <div class="middle">
+          <div class="text">
+            <div class="text title">
+              {{ shopItem.title }}
+            </div>
+            <div class="text description">
+              {{ shopItem.description }}
+            </div>
+          </div>
+          <div class="price">Preço: R${{ shopItem.price }}</div>
+        </div>
+        <div class="bottom"></div>
       </div>
     </div>
   </div>

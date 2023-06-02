@@ -7,9 +7,24 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  shopItems: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  shopItems: any[] = [
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+    { image: 'Imagem', title: 'Título', description: 'Descrição rápida do produto', price: '10,00' },
+  ];
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService) { }
 
   logOut(): void {
     this.userService.logOut();
