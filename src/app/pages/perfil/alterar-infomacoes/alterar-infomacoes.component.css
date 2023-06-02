@@ -1,0 +1,11 @@
+p,
+span {
+  font-size: 24px;
+}
+
+.row,
+.col,
+p,
+span {
+  background-color: #aac7d8;
+}

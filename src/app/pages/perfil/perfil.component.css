@@ -1,0 +1,36 @@
+main {
+  margin-top: 5rem;
+}
+
+.perfil {
+  height: 91.4vh;
+  width: 100vw;
+
+  background-color: #dfebf6;
+}
+
+.box {
+  height: 79.7vh;
+  width: 95vw;
+
+  background-color: #aac7d8;
+}
+
+.row-primary {
+  width: 100%;
+}
+
+.row,
+.col,
+img,
+a {
+  background-color: #aac7d8;
+}
+
+.action {
+  color: inherit;
+  text-decoration: inherit;
+
+  font-weight: bold;
+  font-size: 2rem;
+}

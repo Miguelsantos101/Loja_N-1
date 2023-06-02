@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-perfil',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent {
-
+  constructor(public userService: UserService) {
+    this.userService.isLoggedIn();
+  }
 }

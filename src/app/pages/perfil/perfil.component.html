@@ -1,1 +1,43 @@
-<p>perfil works!</p>
+<main>
+  <div class="perfil py-5">
+    <div class="d-flex mx-auto box">
+      <div class="row row-primary">
+        <div class="col col-3 my-auto">
+          <div class="row">
+            <div class="col col-12 d-flex">
+              <img src="../../../assets/images/Perfil.svg" alt="Imagem Perfil" class="mx-auto" width="300px">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-12 d-flex">
+              <a class="mx-auto action" routerLink="informacoes">Informações</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-12 d-flex">
+              <a class="mx-auto action" routerLink="alterar-informacoes">Alterar Informações</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-12 d-flex">
+              <a class="mx-auto action" routerLink="mudar-senha">Trocar senha</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-12 d-flex">
+              <a class="mx-auto action">Deletar conta</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-12 d-flex">
+              <a class="mx-auto action" (click)="userService.logOut()" style="cursor: pointer;">Sair</a>
+            </div>
+          </div>
+        </div>
+        <div class="col col-9 my-auto">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

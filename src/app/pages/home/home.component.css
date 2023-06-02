@@ -9,7 +9,7 @@
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 5rem;
 }
 
 div.main {
@@ -22,7 +22,7 @@ div.shop-item {
   max-height: calc((100vh - 8rem) / 3);
 }
 
-div.container {
+div.box {
   display: flex;
   flex-direction: column;
   background-color: #44576d;

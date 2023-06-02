@@ -1,0 +1,41 @@
+<div class="row mb-3">
+  <div class="col col-6">
+    <div class="row mb-2">
+      <div class="col col-12">
+        <span>Nome:</span>
+        <input class="form-control" type="text" value="{{ user.name }}" readonly disabled>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col col-12">
+        <span>E-mail:</span>
+        <input class="form-control" type="text" width="100%" value="{{ user.email }}">
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col col-12">
+        <span>Data Nascimento:</span>
+        <input class="form-control" type="date" width="100%">
+      </div>
+    </div>
+  </div>
+  <div class="col col-6">
+    <div class="row mb-2">
+      <div class="col col-12">
+        <span>Endereço Principal:</span>
+        <input class="form-control" type="text" width="100%" value="{{ user.firstAddress}}">
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col col-12">
+        <span>Endereço Secundário:</span>
+        <input class="form-control" type="text" width="100%" value="{{ user.secondAddress }}">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mb-2">
+  <div class="col col-12 d-flex justify-content-end">
+    <button class="btn btn-success">Salvar</button>
+  </div>
+</div>

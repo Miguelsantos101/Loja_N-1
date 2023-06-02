@@ -4,6 +4,7 @@ main {
   align-items: center;
   padding: 2rem;
   margin: 0px;
+  margin-top: 5rem;
   border: 0px;
   height: calc(100vh - 5rem);
   width: auto;
