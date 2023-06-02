@@ -8,13 +8,9 @@
   border: 0px;
 }
 
-main {
-  margin-top: 80px;
-}
-
 section.left-side {
   background-color: #e6e6e6;
-  height: 100vh;
+  height: calc(100vh - 5rem);
   width: 50vw;
 }
 
@@ -26,14 +22,8 @@ img.logo {
 
 section.right-side {
   background-color: #29353c;
-  height: 100vh;
+  height: calc(100vh - 5rem);
   width: 50vw;
-}
-
-div.container {
-  height: 55rem;
-  width: 55rem;
-  border-radius: 10px;
 }
 
 form {

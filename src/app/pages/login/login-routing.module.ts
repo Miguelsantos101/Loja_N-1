@@ -14,7 +14,7 @@ const loginRoutes: Routes = [
     data: { animation: 'login' },
   },
   {
-    path: 'resgatar',
+    path: 'recuperacao-de-senha',
     title: 'Recuperação de senha',
     component: RecuperacaoSenhaComponent,
     data: { animation: '*' },

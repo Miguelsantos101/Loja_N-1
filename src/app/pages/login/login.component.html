@@ -1,57 +1,21 @@
 <main>
-  <!-- <section>
-    <div class="container">
-      <img class="logo" src="../../../../assets/images/N-1_Logo_Redondo.svg" alt="N-1 Logo" width="500rem" />
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <form action="">
-        <h1>Login</h1>
-      </form>
-
-      <div class="mb-3">
-        <label class="form-label" for="email">E-Mail</label>
-        <input class="form-control" id="email" type="text" formControlName="email" placeholder="E-mail"
-          aria-label="email" />
-      </div>
-
-      <label class="form-label" for="senha">Senha</label>
-      <div class="d-flex mb-3">
-        <input type="password" class="form-control" placeholder="Senha" aria-label="Senha" id="senha"
-          [type]="showPassword ? 'text' : 'password'" formControlName="senha" />
-        <img [src]="showPassword ? '../../../assets/images/Olho-fechado.svg' : '../../../assets/images/Olho-aberto.svg'"
-          [alt]="showPassword ? 'Olho fechado' : 'Olho aberto'" width="38px" (click)="showOrHidePassword()" />
-        <i class="bi bi-eye-slash"></i>
-      </div>
-
-
-      <div class="flex-column">
-        <div>
-
-        </div>
-        <div>
-          <input class="form-control input-password" id="senha" [type]="showPassword ? 'text' : 'password'"
-            formControlName="senha" />
-          <a class="eye password" >
-
-          </a>
-        </div>
-      </div>
-
-
-    </div>
-  </section> -->
   <section class="left-side">
     <div class="container">
-      <img class="logo" src="../../../../assets/images/N-1_Logo_Redondo.svg" alt="N-1 Logo" />
+      <img
+        class="logo"
+        src="../../../../assets/images/N-1_Logo_Redondo.svg"
+        alt="N-1 Logo"
+      />
     </div>
   </section>
 
   <section class="right-side">
-    <div class="container p-4">
-      <form class="form form-group" [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="container w-75 h-75 rounded">
+      <form
+        class="form form-group"
+        [formGroup]="loginForm"
+        (ngSubmit)="login()"
+      >
         <div>
           <h1>Login</h1>
         </div>
@@ -59,31 +23,52 @@
         <div class="flex-column">
           <div>
             <label class="form-label" for="email">E-Mail</label>
-            <img class="icon" src="../../../../assets/images/E-Mail.svg" alt="E-Mail" />
+            <img
+              class="icon"
+              src="../../../../assets/images/E-Mail.svg"
+              alt="E-Mail"
+            />
           </div>
-          <input class="form-control" id="email" type="text" formControlName="email" />
+          <input
+            class="form-control"
+            id="email"
+            type="text"
+            formControlName="email"
+          />
         </div>
 
         <div class="flex-column">
           <div>
             <label class="form-label" for="senha">Senha</label>
-            <img class="icon" src="../../../../assets/images/Cadeado.svg" alt="Senha" />
+            <img
+              class="icon"
+              src="../../../../assets/images/Cadeado.svg"
+              alt="Senha"
+            />
           </div>
           <div>
-            <input class="form-control input-password" id="senha" [type]="showPassword ? 'text' : 'password'"
-              formControlName="senha" />
+            <input
+              class="form-control input-password"
+              id="senha"
+              [type]="showPassword ? 'text' : 'password'"
+              formControlName="senha"
+            />
             <a class="eye password" (click)="showOrHidePassword()">
-              <img class="icon2" [src]="
+              <img
+                class="icon2"
+                [src]="
                   showPassword
                     ? '../../../../assets/images/Olho-fechado.svg'
                     : '../../../../assets/images/Olho-aberto.svg'
-                " [alt]="showPassword ? 'Olho fechado' : 'Olho aberto'" />
+                "
+                [alt]="showPassword ? 'Olho fechado' : 'Olho aberto'"
+              />
             </a>
           </div>
         </div>
 
         <div class="links">
-          <a routerLink="/resgatar">Esqueceu sua senha?</a>
+          <a routerLink="/recuperacao-de-senha">Esqueceu sua senha?</a>
           <a routerLink="/cadastro">Crie uma nova conta</a>
         </div>
 
