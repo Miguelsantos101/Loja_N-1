@@ -1,23 +1,23 @@
 <nav class="navbar fixed-top navbar-expand-lg bg-light">
   <div class="container-fluid py-2">
-    <a class="navbar-brand border border-dark rounded" href="#"><img src="../../../../assets/images/N-1_Logo.svg"
-        alt="N-1" width="50rem" /></a>
+    <a class="navbar-brand border border-dark rounded" routerLink="home"><img
+        src="../../../../assets/images/N-1_Logo.svg" alt="N-1" width="50rem" height="50rem" /></a>
 
-    <button *ngIf="mostrarItensMenu" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    <button *ngIf="showMenuItems" class="navbar-toggler" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
       aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div *ngIf="mostrarItensMenu" class="collapse navbar-collapse" id="navbarToggler">
+    <div *ngIf="showMenuItems" class="collapse navbar-collapse" id="navbarToggler">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" routerLink="contato"> <img src="../../../../assets/images/Contato.svg" alt="Contato"
-              width="32rem" />
+          <a class="nav-link" routerLink="contato">
+            <img src="../../../../assets/images/Contato.svg" alt="Contato" width="32rem" />
             Contato</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" (click)="abrirPesquisa()" style="cursor: pointer;">
+          <a class="nav-link" (click)="openSearch()" style="cursor: pointer">
             <img src="../../../../assets/images/Lupa.svg" alt="Lupa" width="24rem" />
             Pesquisar</a>
         </li>
@@ -26,14 +26,16 @@
 
     <div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li *ngIf="mostrarItensMenu" class="nav-item">
-          <a class="nav-link" (click)="abrirCarrinho()" style="cursor: pointer; margin-right: 100px">
+        <li *ngIf="showMenuItems" class="nav-item">
+          <a class="nav-link" (click)="openCart()" style="cursor: pointer; margin-right: 100px">
             <img src="../../../../assets/images/Carrinho.svg" alt="Carrinho" width="32rem" />
             qtd. Itens
           </a>
         </li>
         <li *ngIf="userService.loggedOff | async" class="nav-item">
-          <button class="btn btn-outline-success" routerLink="login">Entrar</button>
+          <button class="btn btn-outline-success" routerLink="login">
+            Entrar
+          </button>
         </li>
         <li *ngIf="userService.loggedIn | async" class="nav-item">
           <a class="nav-link" routerLink="perfil">Olá, {{ user }}
@@ -41,7 +43,9 @@
           </a>
         </li>
         <li *ngIf="userService.loggedIn | async" class="nav-item">
-          <button (click)="userService.logOut()" class="btn btn-danger">Sair</button>
+          <button (click)="userService.logOut()" class="btn btn-danger">
+            Sair
+          </button>
         </li>
       </ul>
     </div>

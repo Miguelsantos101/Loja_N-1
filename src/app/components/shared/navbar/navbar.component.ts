@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Subscription } from 'rxjs';
 
 import { UserService } from 'src/app/services/user.service';
 
@@ -11,32 +11,34 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class NavbarComponent {
   user: string = 'Usuário';
-  routeSubscription: any;
-  mostrarItensMenu: boolean = true;
+  routeSubscription: Subscription = new Subscription;
+  showMenuItems: boolean = true;
 
   constructor(public userService: UserService, private router: Router) {
     this.userService.isLoggedIn();
   }
 
   ngOnInit() {
-    // clear alerts on location change
-    this.routeSubscription = this.router.events.subscribe(event => {
+    this.routeSubscription = this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        if (event.url === '/login' || event.url === '/cadastro' || event.url === '/resgatar') {
-          this.mostrarItensMenu = false;
-        }
-        else {
-          this.mostrarItensMenu = true;
+        if (
+          event.url === '/login' ||
+          event.url === '/cadastro' ||
+          event.url === '/recuperacao-de-senha'
+        ) {
+          this.showMenuItems = false;
+        } else {
+          this.showMenuItems = true;
         }
       }
     });
   }
 
-  abrirPesquisa() {
+  openSearch() {
     return console.log(0);
   }
 
-  abrirCarrinho() {
+  openCart() {
     return console.log(0);
   }
 }
