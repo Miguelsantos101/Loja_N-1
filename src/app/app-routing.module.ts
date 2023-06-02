@@ -11,13 +11,11 @@ import { ContatoComponent } from './pages/contato/contato.component';
 const routes: Routes = [
   {
     path: 'contato', title: 'Contato',
-    component: ContatoComponent, data: { animation: '*' },
-    canActivate: [authGuard],
+    component: ContatoComponent, data: { animation: '*' }
   },
   {
     path: 'pesquisar', title: 'Pesquisar',
-    component: PesquisarComponent, data: { animation: '*' },
-    canActivate: [authGuard],
+    component: PesquisarComponent, data: { animation: '*' }
   },
   {
     path: 'home', title: 'Loja N-1',
