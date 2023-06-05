@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
+import { User } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-login',
@@ -26,7 +26,6 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.createForm();
-    this.showOrHidePassword();
   }
 
   createForm(): void {
@@ -36,7 +35,7 @@ export class LoginComponent {
     });
   }
 
-  // Refatorar esse códgo depois kk
+  // Refatorar esse código depois kk
   formValid(): boolean {
     if (!this.loginForm.valid) {
       if (

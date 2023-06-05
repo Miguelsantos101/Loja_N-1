@@ -8,12 +8,8 @@
   border: 0px;
 }
 
-main {
-  margin-top: 5rem;
-}
-
 section {
-  height: 91.7vh;
+  height: calc(100vh - 5rem);
   width: 50vw;
 }
 
@@ -27,13 +23,12 @@ section.left-side {
 
 img.logo {
   height: 45rem;
-  width: 45rem;
   border: 1px solid #000000;
 }
 
 div.box {
-  height: 40rem;
-  width: 40rem;
+  height: var(--div-box-size);
+  width: var(--div-box-size);
   border-radius: 10px;
 }
 

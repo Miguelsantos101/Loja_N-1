@@ -1,51 +1,57 @@
-<nav class="navbar fixed-top navbar-expand-lg bg-light">
-  <div class="container-fluid py-2">
-    <a class="navbar-brand border border-dark rounded" routerLink="home"><img
-        src="../../../../assets/images/N-1_Logo.svg" alt="N-1" width="50rem" height="50rem" /></a>
-
-    <button *ngIf="showMenuItems" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div *ngIf="showMenuItems" class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="contato">
-            <img src="../../../../assets/images/Contato.svg" alt="Contato" width="32rem" />
-            Contato</a>
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="left-side">
+      <ul class="navbar-links">
+        <li class="icon icon-hover icon-border">
+          <a routerLink="home">
+            <img src="../../../../assets/images/N-1_Logo.svg" alt="N-1 Logo" />
+          </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" (click)="openSearch()" style="cursor: pointer">
-            <img src="../../../../assets/images/Lupa.svg" alt="Lupa" width="24rem" />
-            Pesquisar</a>
+
+        <li class="icon icon-hover">
+          <a routerLink="home">
+            Home
+            <img src="../../../../assets/images/Home.svg" alt="Home" />
+          </a>
+        </li>
+
+        <li class="icon icon-hover">
+          <a routerLink="pesquisar">
+            Pesquisar
+            <img src="../../../../assets/images/Lupa.svg" alt="Lupa" />
+          </a>
+        </li>
+
+        <li class="icon icon-hover">
+          <a routerLink="contato">
+            Contato
+            <img src="../../../../assets/images/Contato.svg" alt="Contato" />
+          </a>
         </li>
       </ul>
     </div>
 
-    <div>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li *ngIf="showMenuItems" class="nav-item">
-          <a class="nav-link" (click)="openCart()" style="cursor: pointer; margin-right: 100px">
-            <img src="../../../../assets/images/Carrinho.svg" alt="Carrinho" width="32rem" />
+    <div class="right-side">
+      <ul class="navbar-links">
+        <li *ngIf="userService.loggedIn | async">
+          <a class="icon icon-hover" (click)="openCart()">
             qtd. Itens
+            <img src="../../../../assets/images/Carrinho.svg" alt="Carrinho" />
           </a>
         </li>
-        <li *ngIf="userService.loggedOff | async" class="nav-item">
-          <button class="btn btn-outline-success" routerLink="login">
-            Entrar
-          </button>
-        </li>
-        <li *ngIf="userService.loggedIn | async" class="nav-item">
-          <a class="nav-link" routerLink="perfil">Olá, {{ user }}
-            <img src="../../../../assets/images/Perfil.svg" alt="Perfil" width="32rem" />
+        <li *ngIf="userService.loggedIn | async">
+          <a class="icon icon-hover" routerLink="perfil">
+            Olá, {{ user }}
+            <img src="../../../../assets/images/Perfil.svg" alt="Perfil" />
           </a>
         </li>
-        <li *ngIf="userService.loggedIn | async" class="nav-item">
-          <button (click)="userService.logOut()" class="btn btn-danger">
+        <li *ngIf="userService.loggedIn | async">
+          <button class="btn logout" (click)="userService.logOut()">
             Sair
           </button>
+        </li>
+        <li *ngIf="userService.loggedOut | async">
+          <button class="btn login" routerLink="login">Entrar</button>
         </li>
       </ul>
     </div>

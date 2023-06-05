@@ -19,7 +19,11 @@ export class CadastroComponent {
     private formBuilder: FormBuilder,
     private router: Router,
     private userService: UserService
-  ) {}
+  ) {
+    if (this.userService.isLoggedIn()) {
+      this.router.navigate(['home']);
+    }
+  }
 
   ngOnInit(): void {
     this.createForm();

@@ -5,7 +5,6 @@ import { LoginComponent } from './login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { RecuperacaoSenhaComponent } from './recuperar-senha/recuperacao-senha.component';
 
-
 const loginRoutes: Routes = [
   {
     path: 'login',
@@ -25,10 +24,12 @@ const loginRoutes: Routes = [
     component: CadastroComponent,
     data: { animation: '*' },
   },
+  { path: '', title: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', title: '', redirectTo: 'login', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(loginRoutes)],
   exports: [RouterModule],
 })
-export class LoginRoutingModule { }
+export class LoginRoutingModule {}

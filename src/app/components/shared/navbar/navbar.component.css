@@ -2,28 +2,36 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 
   color: #000000;
   text-decoration-color: #000000;
   font-style: italic;
   background-color: #ffffff;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
 }
 
 nav.navbar {
   height: 5rem;
 }
 
-div.icon img {
+ul.navbar-links {
+  gap: 1.25rem;
+}
+
+.icon img {
   height: 3.5rem;
   width: 3.5rem;
 }
 
-div.icon.icon-border img {
+.icon.icon-border img {
   border-radius: 10px;
   border: 1px solid #000000;
 }
 
-div.icon.icon-hover img:hover {
+.icon.icon-hover img:hover {
   background-color: none;
 }
 
@@ -39,4 +47,18 @@ div.icon.icon-hover img:hover {
 
 a {
   gap: 0.5rem;
+}
+
+button.login {
+  color: #ffffff;
+  background-color: #44576d;
+  width: 4rem;
+  height: 2.5rem;
+}
+
+button.logout {
+  color: #ffffff;
+  background-color: #f82e2e;
+  width: 4rem;
+  height: 2.5rem;
 }

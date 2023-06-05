@@ -24,6 +24,6 @@ import { LoginRoutingModule } from './login-routing.module';
     LoginComponent,
     CadastroComponent,
     RecuperacaoSenhaComponent
-  ]
+  ],
 })
 export class LoginModule { }
