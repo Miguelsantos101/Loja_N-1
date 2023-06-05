@@ -18,12 +18,16 @@ const routes: Routes = [
     title: 'Pesquisar',
     component: PesquisarComponent,
     data: { animation: '*' },
+    path: 'contato', title: 'Contato',
+    component: ContatoComponent, data: { animation: '*' }
   },
   {
     path: 'home',
     title: 'Loja N-1',
     component: HomeComponent,
     data: { animation: 'home' },
+    path: 'pesquisar', title: 'Pesquisar',
+    component: PesquisarComponent, data: { animation: '*' }
   },
   {
     path: 'perfil',
