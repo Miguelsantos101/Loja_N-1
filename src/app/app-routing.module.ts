@@ -11,13 +11,13 @@ const routes: Routes = [
     path: 'contato',
     title: 'Contato',
     component: ContatoComponent,
-    data: { animation: '*' },
+    data: { animation: 'contato' },
   },
   {
     path: 'pesquisar',
     title: 'Pesquisar',
     component: PesquisarComponent,
-    data: { animation: '*' },
+    data: { animation: 'pesquisar' },
   },
   {
     path: 'home',
@@ -33,8 +33,20 @@ const routes: Routes = [
       import('./pages/perfil/perfil.module').then((x) => x.PerfilModule),
     data: { animation: '*' },
   },
-  { path: '', title: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '*', title: '', redirectTo: 'home', pathMatch: 'full' },
+  {
+    path: '',
+    title: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+    data: { animation: '*' },
+  },
+  {
+    path: '*',
+    title: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+    data: { animation: '*' },
+  },
 ];
 
 @NgModule({
