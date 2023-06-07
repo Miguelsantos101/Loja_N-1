@@ -39,7 +39,7 @@
 
         <div class="flex-column">
           <div>
-            <label class="form-label" for="senha">Senha</label>
+            <label class="form-label" for="password">Senha</label>
             <img
               class="icon"
               src="../../../../assets/images/Cadeado.svg"
@@ -49,9 +49,9 @@
           <div>
             <input
               class="form-control input-password"
-              id="senha"
+              id="password"
               [type]="showPassword ? 'text' : 'password'"
-              formControlName="senha"
+              formControlName="password"
             />
             <a class="eye password" (click)="showOrHidePassword()">
               <img

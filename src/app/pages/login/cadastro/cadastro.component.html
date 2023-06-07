@@ -3,7 +3,7 @@
     <div class="box">
       <form
         class="form form-group"
-        [formGroup]="cadastroForm"
+        [formGroup]="registerForm"
         (ngSubmit)="createAccount()"
       >
         <div>
@@ -12,7 +12,7 @@
 
         <div class="flex-column">
           <div>
-            <label class="form-label" for="email">Nome</label>
+            <label class="form-label" for="name">Nome</label>
             <img
               class="icon"
               src="../../../../assets/images/Perfil.svg"
@@ -21,9 +21,9 @@
           </div>
           <input
             class="form-control"
-            id="nome"
+            id="name"
             type="text"
-            formControlName="nome"
+            formControlName="name"
           />
         </div>
 
@@ -46,7 +46,7 @@
 
         <div class="flex-column">
           <div>
-            <label class="form-label" for="senha">Senha</label>
+            <label class="form-label" for="password">Senha</label>
             <img
               class="icon"
               src="../../../../assets/images/Cadeado.svg"
@@ -56,9 +56,9 @@
           <div>
             <input
               class="form-control input-password"
-              id="senha"
+              id="password"
               [type]="showPassword ? 'text' : 'password'"
-              formControlName="senha"
+              formControlName="password"
             />
             <a class="eye password" (click)="showOrHidePassword(1)">
               <img
@@ -76,7 +76,7 @@
 
         <div class="flex-column">
           <div>
-            <label class="form-label" for="confirmaSenha"
+            <label class="form-label" for="passwordConfirmation"
               >Confirmar senha</label
             >
             <img
@@ -88,9 +88,9 @@
           <div>
             <input
               class="form-control input-password"
-              id="confirmaSenha"
+              id="passwordConfirmation"
               [type]="showPasswordConfirmation ? 'text' : 'password'"
-              formControlName="confirmaSenha"
+              formControlName="passwordConfirmation"
             />
             <a class="eye password" (click)="showOrHidePassword(2)">
               <img

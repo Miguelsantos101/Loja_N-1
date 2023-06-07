@@ -1,11 +1,11 @@
 export class User {
   email: string = '';
-  senha: string = '';
+  password: string = '';
 
   constructor(user?: User) {
     if (user) {
       this.email = user.email;
-      this.senha = user.senha;
+      this.password = user.password;
     }
   }
 }

@@ -23,6 +23,10 @@ a {
   background-color: #aac7d8;
 }
 
+a {
+  cursor: pointer;
+}
+
 .action {
   color: inherit;
   text-decoration: inherit;

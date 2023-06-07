@@ -11,7 +11,7 @@ import { PasswordRecovery } from 'src/app/models/password-recovery.model';
   styleUrls: ['./recuperacao-senha.component.css'],
 })
 export class RecuperacaoSenhaComponent {
-  recuperaSenhaForm: FormGroup = this.formBuilder.group({});
+  passwordRecoveryForm: FormGroup = this.formBuilder.group({});
 
   constructor(
     private formBuilder: FormBuilder,
@@ -28,13 +28,13 @@ export class RecuperacaoSenhaComponent {
   }
 
   createForm(): void {
-    this.recuperaSenhaForm = this.formBuilder.group({
+    this.passwordRecoveryForm = this.formBuilder.group({
       email: ['', [Validators.required]],
     });
   }
 
   formValid(): boolean {
-    if (!this.recuperaSenhaForm.valid) {
+    if (!this.passwordRecoveryForm.valid) {
       alert('Por favor verifique o campo de email');
       return false;
     }
@@ -45,7 +45,7 @@ export class RecuperacaoSenhaComponent {
   sendEmail(): void {
     if (this.formValid()) {
       var dtoPasswordRecovery: PasswordRecovery = new PasswordRecovery(
-        this.recuperaSenhaForm.value
+        this.passwordRecoveryForm.value
       );
       this.userService.passwordRecovery(dtoPasswordRecovery);
       this.router.navigate(['/login']);

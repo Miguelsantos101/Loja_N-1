@@ -31,7 +31,7 @@ export class LoginComponent {
   createForm(): void {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      senha: ['', [Validators.required]],
+      password: ['', [Validators.required]],
     });
   }
 
@@ -40,7 +40,7 @@ export class LoginComponent {
     if (!this.loginForm.valid) {
       if (
         !this.loginForm.controls['email'].valid &&
-        !this.loginForm.controls['senha'].valid
+        !this.loginForm.controls['password'].valid
       ) {
         alert('Preencha todos os campos corretamente antes de continuar');
         return false;
@@ -51,7 +51,7 @@ export class LoginComponent {
         return false;
       }
 
-      if (!this.loginForm.controls['senha'].valid) {
+      if (!this.loginForm.controls['password'].valid) {
         alert('Por favor verifique o campo de senha');
         return false;
       }

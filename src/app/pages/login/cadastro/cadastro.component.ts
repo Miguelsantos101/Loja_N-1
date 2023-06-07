@@ -11,7 +11,7 @@ import { Register } from 'src/app/models/register.model';
   styleUrls: ['./cadastro.component.css'],
 })
 export class CadastroComponent {
-  cadastroForm: FormGroup = this.formBuilder.group({});
+  registerForm: FormGroup = this.formBuilder.group({});
   showPassword: boolean = false;
   showPasswordConfirmation: boolean = false;
 
@@ -30,46 +30,46 @@ export class CadastroComponent {
   }
 
   createForm(): void {
-    this.cadastroForm = this.formBuilder.group({
-      nome: ['', [Validators.required]],
+    this.registerForm = this.formBuilder.group({
+      name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      senha: ['', [Validators.required]],
-      confirmaSenha: ['', [Validators.required]],
+      password: ['', [Validators.required]],
+      passwordConfirmation: ['', [Validators.required]],
     });
   }
 
   // Refatorar esse código depois kk
   formValid(): boolean {
-    if (!this.cadastroForm.valid) {
+    if (!this.registerForm.valid) {
       if (
-        !this.cadastroForm.controls['nome'].valid &&
-        !this.cadastroForm.controls['email'].valid &&
-        !this.cadastroForm.controls['senha'].valid &&
-        !this.cadastroForm.controls['confirmaSenha'].valid
+        !this.registerForm.controls['name'].valid &&
+        !this.registerForm.controls['email'].valid &&
+        !this.registerForm.controls['password'].valid &&
+        !this.registerForm.controls['passwordConfirmation'].valid
       ) {
         alert('Preencha todos os campos corretamente antes de continuar');
         return false;
       }
-      if (!this.cadastroForm.controls['nome'].valid) {
+      if (!this.registerForm.controls['name'].valid) {
         alert('Por favor verifique o campo de nome');
         return false;
       }
-      if (!this.cadastroForm.controls['email'].valid) {
+      if (!this.registerForm.controls['email'].valid) {
         alert('Por favor verifique o campo de email');
         return false;
       }
-      if (!this.cadastroForm.controls['senha'].valid) {
+      if (!this.registerForm.controls['password'].valid) {
         alert('Por favor verifique o campo de senha');
         return false;
       }
-      if (!this.cadastroForm.controls['confirmaSenha'].valid) {
+      if (!this.registerForm.controls['passwordConfirmation'].valid) {
         alert('Por favor verifique o campo de confirmação de senha');
         return false;
       }
     }
     if (
-      this.cadastroForm.controls['senha'].value !==
-      this.cadastroForm.controls['confirmaSenha'].value
+      this.registerForm.controls['password'].value !==
+      this.registerForm.controls['passwordConfirmation'].value
     ) {
       alert('A senha e a confirmação de senha devem ser iguais!');
       return false;
@@ -79,7 +79,7 @@ export class CadastroComponent {
 
   createAccount(): void {
     if (this.formValid()) {
-      var dtoRegister: Register = new Register(this.cadastroForm.value);
+      var dtoRegister: Register = new Register(this.registerForm.value);
       this.userService.register(dtoRegister);
       this.router.navigate(['/login']);
     }

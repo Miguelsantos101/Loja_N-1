@@ -1,15 +1,15 @@
 export class Register {
-  nome: string = '';
+  name: string = '';
   email: string = '';
-  senha: string = '';
-  confirmaSenha: string = '';
+  password: string = '';
+  passwordConfirmation: string = '';
 
   constructor(register?: Register) {
     if (register) {
-      this.nome = register.nome;
+      this.name = register.name;
       this.email = register.email;
-      this.senha = register.senha;
-      this.confirmaSenha = register.confirmaSenha;
+      this.password = register.password;
+      this.passwordConfirmation = register.passwordConfirmation;
     }
   }
 }
