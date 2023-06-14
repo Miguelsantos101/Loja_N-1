@@ -45,11 +45,12 @@ export class UserService {
     }
     //Remover essa parte depois
 
-    return this.appService.postItems('', user).pipe(
+    return this.appService.postItems('login', user).pipe(
       map((response: any) => {
         var data = response;
         if (data.token) {
           this._loggedIn.next(true);
+          this._loggedOut.next(false);
           sessionStorage.setItem('auth_token', data.token);
         }
         return response;
@@ -64,7 +65,7 @@ export class UserService {
   }
 
   register(register: Register): Observable<any> {
-    return this.appService.postItems('', register).pipe(
+    return this.appService.postItems('registrar', register).pipe(
       map((response: any) => {
         var data = response;
         return data;
@@ -73,7 +74,7 @@ export class UserService {
   }
 
   passwordRecovery(passwordRecovery: PasswordRecovery): Observable<any> {
-    return this.appService.postItems('', passwordRecovery).pipe(
+    return this.appService.postItems('recuperar-senha', passwordRecovery).pipe(
       map((response: any) => {
         var data = response;
         return data;
