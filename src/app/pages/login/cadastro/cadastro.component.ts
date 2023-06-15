@@ -66,6 +66,9 @@ export class CadastroComponent {
         alert('Por favor verifique o campo de confirmação de senha');
         return false;
       }
+
+      alert('Algo deu errado');
+      return false;
     }
     if (
       this.registerForm.controls['password'].value !==

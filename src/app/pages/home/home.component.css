@@ -1,11 +1,11 @@
 * {
   display: flex;
-  flex: 1 0 20%;
   flex-wrap: wrap;
+  flex: 1 0 20%;
   margin: 0rem;
   padding: 0rem;
   border: 0rem;
-  color: #fff;
+  color: #ffff;
 }
 
 div.main {
@@ -28,7 +28,7 @@ div.box {
 }
 
 div.top {
-  flex: 1 0 40%;
+  flex: 1 0 35%;
   align-items: center;
   justify-content: center;
   background-color: #44576d;
@@ -36,6 +36,7 @@ div.top {
 
 div.middle {
   flex: 1 0 45%;
+  justify-content: space-between;
   flex-direction: column;
   background-color: #768a96;
 }
@@ -58,11 +59,38 @@ div.price {
 }
 
 div.bottom {
-  flex: 1 0 15%;
+  flex: 1 0 20%;
   background-color: #44576d;
 }
 
 div.top,
 div.bottom {
+  border-radius: 0.625rem;
+}
+
+img {
+  flex: 0 !important;
   border-radius: 10px;
+  background-color: transparent;
+}
+
+div.links {
+  justify-content: center;
+  align-items: center;
+  background-color: #44576d;
+  border-radius: 0.625rem;
+  font-size: 0.7rem;
+}
+
+button.link {
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 0.625rem;
+  background-color: #44576d;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
 }

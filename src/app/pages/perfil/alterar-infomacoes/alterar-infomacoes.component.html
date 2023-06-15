@@ -3,19 +3,35 @@
     <div class="row mb-2">
       <div class="col col-12">
         <span>Nome:</span>
-        <input class="form-control" type="text" value="{{ user.name }}" readonly disabled>
+        <input
+          class="form-control"
+          type="text"
+          value="{{ user.name }}"
+          readonly
+          disabled
+        />
       </div>
     </div>
     <div class="row mb-2">
       <div class="col col-12">
         <span>E-mail:</span>
-        <input class="form-control" type="text" width="100%" value="{{ user.email }}">
+        <input
+          class="form-control"
+          type="text"
+          width="100%"
+          value="{{ user.email }}"
+        />
       </div>
     </div>
     <div class="row mb-2">
       <div class="col col-12">
         <span>Data Nascimento:</span>
-        <input class="form-control" type="date" width="100%">
+        <input
+          class="form-control"
+          type="date"
+          width="100%"
+          value="{{ user.birthday }}"
+        />
       </div>
     </div>
   </div>
@@ -23,13 +39,23 @@
     <div class="row mb-2">
       <div class="col col-12">
         <span>Endereço Principal:</span>
-        <input class="form-control" type="text" width="100%" value="{{ user.firstAddress}}">
+        <input
+          class="form-control"
+          type="text"
+          width="100%"
+          value="{{ user.firstAddress }}"
+        />
       </div>
     </div>
     <div class="row mb-2">
       <div class="col col-12">
         <span>Endereço Secundário:</span>
-        <input class="form-control" type="text" width="100%" value="{{ user.secondAddress }}">
+        <input
+          class="form-control"
+          type="text"
+          width="100%"
+          value="{{ user.secondAddress }}"
+        />
       </div>
     </div>
   </div>

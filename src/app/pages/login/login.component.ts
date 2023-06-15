@@ -55,6 +55,9 @@ export class LoginComponent {
         alert('Por favor verifique o campo de senha');
         return false;
       }
+
+      alert('Algo deu errado');
+      return false;
     }
     return true;
   }

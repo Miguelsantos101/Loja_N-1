@@ -9,9 +9,9 @@ export class AlterarInfomacoesComponent {
   user: any = {
     name: 'Usuário',
     email: 'exemplo@teste.com',
-    birthday: '02/03/1998',
-    firstAddress: 'Rua de exemplo, Nº 1213',
-    secondAddress: 'Rua de exemplo2, Nº 1213',
+    birthday: '1998-03-02',
+    firstAddress: 'Rua de exemplo, Nº 0000',
+    secondAddress: 'Rua de exemplo 2, Nº 0000',
   };
 
   saveChanges(): void {
