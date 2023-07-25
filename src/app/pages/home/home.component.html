@@ -1,60 +1,38 @@
-<main>
-  <div class="main">
-    <div class="shop-item" *ngFor="let shopItem of shopItems">
-      <div class="box">
-        <div class="top">
-          {{ shopItem.image }}
+<main class="main">
+  <div class="shopItem" *ngFor="let shopItem of shopItems">
+    <div class="shopItem__top">
+      {{ shopItem.image }}
+    </div>
+    <div class="shopItem__middle">
+      <div class="text">
+        <div class="text">
+          {{ shopItem.title }}
         </div>
-        <div class="middle">
-          <div class="text">
-            <div class="text title">
-              {{ shopItem.title }}
-            </div>
-            <div class="text description">
-              {{ shopItem.description }}
-            </div>
-          </div>
-          <div class="price">Preço: R${{ shopItem.price }}</div>
+        <div class="text">
+          {{ shopItem.description }}
         </div>
-        <div class="bottom">
-          <div class="links">
-            <button class="link">
-              <img
-                class="icon"
-                src="../../../../assets/images/_.svg"
-                alt="Interrogação"
-              />
-              Vizualização rápida
-            </button>
-            <button class="link">
-              <img
-                class="icon"
-                src="../../../../assets/images/+.svg"
-                alt="Adição"
-              />
-              Adicionar ao carrinho
-            </button>
-          </div>
-        </div>
+      </div>
+      <div class="price">Preço: R${{ shopItem.price }}</div>
+    </div>
+    <div class="shopItem__bottom">
+      <div class="buttons">
+        <button class="button">
+          <img
+            class="icon"
+            src="../../../../assets/images/_.svg"
+            alt="Interrogação"
+          />
+          Vizualização rápida
+        </button>
+        <button class="button">
+          <img
+            class="icon"
+            src="../../../../assets/images/+.svg"
+            alt="Adição"
+          />
+          Adicionar ao carrinho
+        </button>
       </div>
     </div>
   </div>
 </main>
-
-<!-- <button>
-  <img
-    class="icon"
-    src="../../../../assets/images/_.svg"
-    alt="Interrogação"
-  />
-  Vizualização rápida
-</button> -->
-
-<!-- <button>
-  <img
-    class="icon"
-    src="../../../../assets/images/+.svg"
-    alt="Adição"
-  />
-  Adicionar ao carrinho
-</button> -->

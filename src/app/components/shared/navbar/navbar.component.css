@@ -1,64 +1,58 @@
+/* || General styles */
+
 * {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
 
-  color: #000000;
-  text-decoration-color: #000000;
   font-style: italic;
-  background-color: #ffffff;
-  margin: 0px;
-  border: 0px;
-  padding: 0px;
+  text-decoration-color: black;
+
+  color: black;
+  background-color: white;
 }
 
-nav.navbar {
-  height: 5rem;
+a {
+  color: inherit;
 }
 
-ul.navbar-links {
-  gap: 1.25rem;
+/* || Navbar */
+
+.navbar {
+  padding: 0.5rem;
 }
 
-.icon img {
+.navbar-links {
+  margin: 0;
+  padding: 0;
+}
+
+/* || Icons */
+
+.icon {
   height: 3.5rem;
   width: 3.5rem;
 }
 
-.icon.icon-border img {
+.icon.icon-border {
   border-radius: 10px;
-  border: 1px solid #000000;
+  border: 1px solid black;
 }
 
-.icon.icon-hover img:hover {
-  background-color: none;
-}
+/* || Buttons */
 
-.left-side {
-  padding: 0.5rem;
-  gap: 1.5rem;
-}
-
-.right-side {
-  padding: 0.5rem;
-  gap: 5rem;
-}
-
-a {
-  gap: 0.5rem;
-}
-
-button.login {
-  color: #ffffff;
-  background-color: #44576d;
+.btn-login {
   width: 4rem;
   height: 2.5rem;
+
+  color: white;
+  background-color: var(--clr-primary2);
 }
 
-button.logout {
-  color: #ffffff;
-  background-color: #f82e2e;
+.btn-logout {
   width: 4rem;
   height: 2.5rem;
+
+  color: white;
+  background-color: var(--clr-error);
 }

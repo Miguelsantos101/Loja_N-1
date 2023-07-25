@@ -23,12 +23,12 @@ section.left-side {
 
 img.logo {
   height: 45rem;
-  border: 1px solid #000000;
+  border: 1px solid black;
 }
 
 div.box {
-  height: var(--div-box-size);
-  width: var(--div-box-size);
+  height: 52rem;
+  width: 52rem;
   border-radius: 10px;
 }
 
@@ -40,7 +40,7 @@ form {
 a.primary,
 button.primary {
   width: inherit;
-  color: #ffffff;
+  color: white;
   background-color: #44576d;
   height: 2.5rem;
 }

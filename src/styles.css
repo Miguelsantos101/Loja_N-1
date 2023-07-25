@@ -2,16 +2,27 @@
 /* @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap'); */
 
 :root {
-  --div-box-size: 52rem;
+  /* 1920 x 969 */
+  width: 100%; /* 1920px */
+  height: 100%; /* 969px */
+  --clr-primary: #29353c;
+  --clr-primary2: #44576d;
+  --clr-secondary: #768a96;
+  --clr-secondary2: #aac7d8;
+  --clr-background: #e6e6e6;
+  --clr-background2: #dfebf6;
+  --clr-error: #f82e2e;
 }
 
-*,
-*::before,
-*::after {
-  /* font-family: "IM Fell DW Pica", serif; */
-  box-sizing: border-box;
-  background-color: #e6e6e6;
+* {
+  /* font-family: "IM Fell DW Pica"; */
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  background-color: var(--clr-background);
 }
+
+/* || General styles */
 
 .form-control:focus {
   border-color: none;
