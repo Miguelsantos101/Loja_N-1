@@ -9,8 +9,8 @@
 }
 
 section {
-  height: calc(100vh - 5rem);
-  width: 50vw;
+  height: inherit;
+  width: 50%;
 }
 
 section.right-side {

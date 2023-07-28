@@ -1,5 +1,3 @@
-/* || General styles */
-
 * {
   display: flex;
   align-items: center;
@@ -16,8 +14,6 @@ a {
   color: inherit;
 }
 
-/* || Navbar */
-
 .navbar {
   padding: 0.5rem;
 }
@@ -26,8 +22,6 @@ a {
   margin: 0;
   padding: 0;
 }
-
-/* || Icons */
 
 .icon {
   height: 3.5rem;
@@ -38,8 +32,6 @@ a {
   border-radius: 10px;
   border: 1px solid black;
 }
-
-/* || Buttons */
 
 .btn-login {
   width: 4rem;

@@ -1,3 +1,85 @@
+<!-- <main>
+  <section class="left-side">
+    <div class="box">
+      <img
+        class="logo"
+        src="../../../../assets/images/N-1_Logo_Redondo.svg"
+        alt="N-1 Logo Redondo"
+      />
+    </div>
+  </section>
+
+  <section class="right-side">
+    <div class="box p-4">
+      <form
+        class="form form-group"
+        [formGroup]="loginForm"
+        (ngSubmit)="login()"
+      >
+        <div>
+          <h1>Login</h1>
+        </div>
+
+        <div class="flex-column">
+          <div>
+            <label class="form-label" for="email">E-Mail</label>
+            <img
+              class="icon"
+              src="../../../../assets/images/E-Mail.svg"
+              alt="E-Mail"
+            />
+          </div>
+          <input
+            class="form-control"
+            id="email"
+            type="text"
+            formControlName="email"
+          />
+        </div>
+
+        <div class="flex-column">
+          <div>
+            <label class="form-label" for="password">Senha</label>
+            <img
+              class="icon"
+              src="../../../../assets/images/Cadeado.svg"
+              alt="Senha"
+            />
+          </div>
+          <div>
+            <input
+              class="form-control input-password"
+              id="password"
+              [type]="showPassword ? 'text' : 'password'"
+              formControlName="password"
+            />
+            <a class="eye password" (click)="showOrHidePassword()">
+              <img
+                class="icon2"
+                [src]="
+                  showPassword
+                    ? '../../../../assets/images/Olho-fechado.svg'
+                    : '../../../../assets/images/Olho-aberto.svg'
+                "
+                [alt]="showPassword ? 'Olho fechado' : 'Olho aberto'"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="links">
+          <a routerLink="/recuperacao-de-senha">Esqueceu sua senha?</a>
+          <a routerLink="/cadastro">Crie uma nova conta</a>
+        </div>
+
+        <div>
+          <button class="btn primary" type="submit">Entrar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main> -->
+
 <main>
   <section class="left-side">
     <div class="box">

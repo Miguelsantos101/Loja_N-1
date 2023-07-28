@@ -20,14 +20,14 @@ import { AppComponent } from './app.component';
     AppComponent,
   ],
   imports: [
-    // modulos angular
+    // Angular modules
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
 
-    // modulos da aplicação
+    // Application modules
     AppRoutingModule,
     LoginModule,
     HomeModule,

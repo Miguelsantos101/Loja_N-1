@@ -1,5 +1,6 @@
 * {
   display: flex;
+
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -9,15 +10,15 @@
 }
 
 section {
-  height: calc(100vh - 5rem);
-  width: 50vw;
+  height: inherit;
+  width: 50%;
 }
 
-section.left-side {
+.left-side {
   background-color: #e6e6e6;
 }
 
-section.right-side {
+.right-side {
   background-color: #29353c;
 }
 
