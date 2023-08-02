@@ -1,10 +1,34 @@
-<main>
-  <label class="title" for="pesquisar"> Oque está procurando? </label>
+<main
+  class="container-fluid d-flex flex-column justify-content-top align-items-center gap-5 g-0"
+>
+  <label
+    class="text-center fs-1 fst-italic text-decoration-underline mt-5"
+    for="pesquisar"
+  >
+    Oque está procurando?
+  </label>
 
-  <div class="d-flex flex-row search-container">
-    <input type="text" id="pesquisar" placeholder="Pesquisar..." />
-    <button class="search-icon">
-      <img class="icon" src="../../../../assets/images/Lupa.svg" alt="Lupa" />
+  <div class="d-flex flex-row w-75">
+    <input
+      class="form-control text-white fs-2 rounded-end-0 border border-black"
+      type="text"
+      id="pesquisar"
+      placeholder="Pesquisar..."
+      style="background-color: var(--clr-primary)"
+    />
+    <button
+      class="border border-black rounded-end-2"
+      type="submit"
+      style="background-color: var(--clr-secondary2)"
+    >
+      <img
+        class="img-fluid rounded-end-2"
+        src="../../../../assets/images/Lupa.svg"
+        alt="Lupa"
+        width="52"
+        height="52"
+        style="background-color: var(--clr-secondary2)"
+      />
     </button>
   </div>
 </main>

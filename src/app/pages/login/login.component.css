@@ -1,9 +1,3 @@
 input {
   background-color: var(--clr-secondary);
 }
-
-button {
-  color: white;
-  border-color: var(--clr-primary2);
-  background-color: var(--clr-primary2);
-}
