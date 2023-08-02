@@ -6,7 +6,7 @@
   height: 100%;
   width: 100%;
 
-  --nav-size: 82px;
+  --navbar-size: 82px;
   --clr-primary: #29353c;
   --clr-primary2: #44576d;
   --clr-secondary: #768a96;
@@ -17,7 +17,7 @@
 }
 
 main {
-  height: calc(100vh - var(--nav-size));
+  height: calc(100vh - var(--navbar-size));
 }
 
 * {

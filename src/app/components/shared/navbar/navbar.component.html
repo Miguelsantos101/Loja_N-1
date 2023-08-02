@@ -1,10 +1,12 @@
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg p-2">
+  <div class="container-fluid g-0">
     <a class="navbar-brand" routerLink="home">
       <img
-        class="icon icon-border"
+        class="img-fluid border border-dark rounded"
         src="../../../../assets/images/N-1_Logo.svg"
         alt="N-1 Logo"
+        width="56"
+        height="56"
       />
     </a>
 
@@ -21,80 +23,111 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav justify-content-between container-fluid">
-        <div>
-          <ul class="navbar-links flex-lg-row flex-column gap-2">
-            <li>
-              <a routerLink="home">
-                Home
-                <img
-                  class="icon"
-                  src="../../../../assets/images/Home.svg"
-                  alt="Home"
-                />
-              </a>
-            </li>
+      <div
+        class="navbar-nav container-fluid d-flex justify-content-between align-items-center gap-2 g-0"
+      >
+        <ul
+          class="list-unstyled d-flex flex-lg-row flex-column justify-content-center align-items-center gap-1 m-0"
+        >
+          <li>
+            <a class="link-dark link-underline-dark" routerLink="home">
+              Home
+              <img
+                class="img-fluid"
+                src="../../../../assets/images/Home.svg"
+                alt="Home"
+                width="56"
+                height="56"
+              />
+            </a>
+          </li>
 
-            <li>
-              <a routerLink="pesquisar">
-                Pesquisar
-                <img
-                  class="icon"
-                  src="../../../../assets/images/Lupa.svg"
-                  alt="Lupa"
-                />
-              </a>
-            </li>
+          <li>
+            <a class="link-dark link-underline-dark" routerLink="pesquisar">
+              Pesquisar
+              <img
+                class="img-fluid"
+                src="../../../../assets/images/Lupa.svg"
+                alt="Lupa"
+                width="56"
+                height="56"
+              />
+            </a>
+          </li>
 
-            <li>
-              <a routerLink="contato">
-                Contato
-                <img
-                  class="icon"
-                  src="../../../../assets/images/Contato.svg"
-                  alt="Contato"
-                />
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul class="navbar-links flex-lg-row flex-column gap-2">
-            <li *ngIf="userService.loggedIn | async">
-              <a (click)="openCart()">
-                qtd. Itens
-                <img
-                  class="icon"
-                  src="../../../../assets/images/Carrinho.svg"
-                  alt="Carrinho"
-                />
-              </a>
-            </li>
+          <li>
+            <a class="link-dark link-underline-dark" routerLink="contato">
+              Contato
+              <img
+                class="img-fluid"
+                src="../../../../assets/images/Contato.svg"
+                alt="Contato"
+                width="56"
+                height="56"
+              />
+            </a>
+          </li>
+        </ul>
 
-            <li *ngIf="userService.loggedIn | async">
-              <a routerLink="perfil">
-                Olá, {{ user }}
-                <img
-                  class="icon"
-                  src="../../../../assets/images/Perfil.svg"
-                  alt="Perfil"
-                />
-              </a>
-            </li>
+        <ul
+          class="list-unstyled d-flex flex-lg-row flex-column justify-content-center align-items-center gap-1 m-0"
+        >
+          <li *ngIf="userService.loggedIn | async">
+            <a (click)="openCart()">
+              qtd. Itens
+              <img
+                class="img-fluid"
+                src="../../../../assets/images/Carrinho.svg"
+                alt="Carrinho"
+                width="56"
+                height="56"
+              />
+            </a>
+          </li>
 
-            <li *ngIf="userService.loggedIn | async">
-              <button class="btn btn-logout" (click)="userService.logOut()">
-                Sair
-              </button>
-            </li>
+          <li *ngIf="userService.loggedIn | async">
+            <a class="link-dark link-underline-dark" routerLink="perfil">
+              Olá, {{ user }}
+              <img
+                class="img-fluid"
+                src="../../../../assets/images/Perfil.svg"
+                alt="Perfil"
+                width="56"
+                height="56"
+              />
+            </a>
+          </li>
 
-            <li *ngIf="userService.loggedOut | async">
-              <button class="btn btn-login" routerLink="login">
-                Entrar
-              </button>
-            </li>
-          </ul>
-        </div>
+          <li *ngIf="userService.loggedIn | async">
+            <button
+              class="btn"
+              (click)="userService.logOut()"
+              style="
+                width: 4rem;
+                height: 2.5rem;
+                color: white;
+                background-color: var(--clr-error);
+              "
+            >
+              Sair
+            </button>
+          </li>
+
+          <li *ngIf="userService.loggedOut | async">
+            <button
+              class="btn"
+              routerLink="login"
+              style="
+                width: 4rem;
+                height: 2.5rem;
+                color: white;
+                background-color: var(--clr-primary2);
+              "
+            >
+              Entrar
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
