@@ -1,34 +1,43 @@
-<!-- <main>
-  <section class="left-side">
-    <div class="box">
-      <img
-        class="logo"
-        src="../../../../assets/images/N-1_Logo_Redondo.svg"
-        alt="N-1 Logo Redondo"
-      />
-    </div>
+<main class="container-fluid d-xxl-flex flex-md-equal g-0">
+  <section
+    class="container-fluid d-flex justify-content-center align-items-center p-2"
+    style="background-color: var(--clr-background)"
+  >
+    <img
+      src="../../../../assets/images/N-1_Logo_Redondo.svg"
+      class="img-fluid border border-dark"
+      alt="N-1 Logo Redondo"
+      width="720"
+      height="720"
+    />
   </section>
 
-  <section class="right-side">
-    <div class="box p-4">
+  <section
+    class="container-fluid d-flex justify-content-center align-items-center p-5"
+    style="background-color: var(--clr-primary)"
+  >
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center p-2 h-100 rounded"
+    >
       <form
-        class="form form-group"
+        class="d-flex flex-column justify-content-center align-items-center gap-2"
         [formGroup]="loginForm"
         (ngSubmit)="login()"
       >
-        <div>
-          <h1>Login</h1>
-        </div>
+        <h1>Login</h1>
 
-        <div class="flex-column">
-          <div>
-            <label class="form-label" for="email">E-Mail</label>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center w-100"
+        >
+          <label class="form-label" for="email"
+            >E-Mail
             <img
-              class="icon"
+              class="img-fluid"
               src="../../../../assets/images/E-Mail.svg"
               alt="E-Mail"
-            />
-          </div>
+              width="32"
+              height="32"
+          /></label>
           <input
             class="form-control"
             id="email"
@@ -37,125 +46,66 @@
           />
         </div>
 
-        <div class="flex-column">
-          <div>
-            <label class="form-label" for="password">Senha</label>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center w-100"
+        >
+          <label class="form-label" for="password"
+            >Senha
             <img
-              class="icon"
+              class="img-fluid"
               src="../../../../assets/images/Cadeado.svg"
               alt="Senha"
-            />
-          </div>
-          <div>
+              width="32"
+              height="32"
+          /></label>
+          <div
+            class="d-flex flex-row justify-content-center align-items-center w-100"
+          >
             <input
-              class="form-control input-password"
+              class="form-control"
               id="password"
               [type]="showPassword ? 'text' : 'password'"
               formControlName="password"
+              style="
+                border: 0;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+              "
             />
-            <a class="eye password" (click)="showOrHidePassword()">
+            <a (click)="showOrHidePassword()" style="cursor: pointer">
               <img
-                class="icon2"
+                class="img-fluid"
                 [src]="
                   showPassword
                     ? '../../../../assets/images/Olho-fechado.svg'
                     : '../../../../assets/images/Olho-aberto.svg'
                 "
                 [alt]="showPassword ? 'Olho fechado' : 'Olho aberto'"
-              />
-            </a>
-          </div>
-        </div>
-
-        <div class="links">
-          <a routerLink="/recuperacao-de-senha">Esqueceu sua senha?</a>
-          <a routerLink="/cadastro">Crie uma nova conta</a>
-        </div>
-
-        <div>
-          <button class="btn primary" type="submit">Entrar</button>
-        </div>
-      </form>
-    </div>
-  </section>
-</main> -->
-
-<main>
-  <section class="left-side">
-    <div class="box">
-      <img
-        class="logo"
-        src="../../../../assets/images/N-1_Logo_Redondo.svg"
-        alt="N-1 Logo Redondo"
-      />
-    </div>
-  </section>
-
-  <section class="right-side">
-    <div class="box p-4">
-      <form
-        class="form form-group"
-        [formGroup]="loginForm"
-        (ngSubmit)="login()"
-      >
-        <div>
-          <h1>Login</h1>
-        </div>
-
-        <div class="flex-column">
-          <div>
-            <label class="form-label" for="email">E-Mail</label>
-            <img
-              class="icon"
-              src="../../../../assets/images/E-Mail.svg"
-              alt="E-Mail"
-            />
-          </div>
-          <input
-            class="form-control"
-            id="email"
-            type="text"
-            formControlName="email"
-          />
-        </div>
-
-        <div class="flex-column">
-          <div>
-            <label class="form-label" for="password">Senha</label>
-            <img
-              class="icon"
-              src="../../../../assets/images/Cadeado.svg"
-              alt="Senha"
-            />
-          </div>
-          <div>
-            <input
-              class="form-control input-password"
-              id="password"
-              [type]="showPassword ? 'text' : 'password'"
-              formControlName="password"
-            />
-            <a class="eye password" (click)="showOrHidePassword()">
-              <img
-                class="icon2"
-                [src]="
-                  showPassword
-                    ? '../../../../assets/images/Olho-fechado.svg'
-                    : '../../../../assets/images/Olho-aberto.svg'
+                width="42"
+                height="42"
+                style="
+                  background-color: var(--clr-secondary2);
+                  border-top-right-radius: 0.375rem;
+                  border-bottom-right-radius: 0.375rem;
                 "
-                [alt]="showPassword ? 'Olho fechado' : 'Olho aberto'"
               />
             </a>
           </div>
         </div>
 
-        <div class="links">
-          <a routerLink="/recuperacao-de-senha">Esqueceu sua senha?</a>
-          <a routerLink="/cadastro">Crie uma nova conta</a>
+        <div class="d-flex gap-4 w-100">
+          <a
+            class="link-dark link-underline-dark"
+            routerLink="/recuperacao-de-senha"
+            >Esqueceu sua senha?</a
+          >
+          <a class="link-dark link-underline-dark" routerLink="/cadastro"
+            >Crie uma nova conta</a
+          >
         </div>
 
-        <div>
-          <button class="btn primary" type="submit">Entrar</button>
+        <div class="d-grid w-100">
+          <button class="btn" type="submit">Entrar</button>
         </div>
       </form>
     </div>
