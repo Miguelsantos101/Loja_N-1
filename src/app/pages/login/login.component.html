@@ -7,8 +7,8 @@
       class="container-fluid d-flex justify-content-center align-items-center p-2 rounded"
     >
       <img
-        src="../../../../assets/images/N-1_Logo_Redondo.svg"
         class="img-fluid border border-dark"
+        src="assets/images/N-1_Logo_Redondo.svg"
         alt="N-1 Logo Redondo"
         width="720"
         height="720"
@@ -37,7 +37,7 @@
             >E-Mail
             <img
               class="img-fluid"
-              src="../../../../assets/images/E-Mail.svg"
+              src="assets/images/E-Mail.svg"
               alt="E-Mail"
               width="32"
               height="32"
@@ -57,39 +57,30 @@
             >Senha
             <img
               class="img-fluid"
-              src="../../../../assets/images/Cadeado.svg"
+              src="assets/images/Cadeado.svg"
               alt="Senha"
               width="32"
               height="32"
           /></label>
           <div class="d-flex justify-content-center align-items-center w-100">
             <input
-              class="form-control"
+              class="form-control rounded-end-0"
               id="password"
               [type]="showPassword ? 'text' : 'password'"
               formControlName="password"
-              style="
-                border: 0;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-              "
             />
-            <a (click)="showOrHidePassword()" style="cursor: pointer">
+            <a role="button" (click)="showOrHidePassword()">
               <img
-                class="img-fluid"
+                class="rounded-end-2"
                 [src]="
                   showPassword
-                    ? '../../../../assets/images/Olho-fechado.svg'
-                    : '../../../../assets/images/Olho-aberto.svg'
+                    ? 'assets/images/Olho-fechado.svg'
+                    : 'assets/images/Olho-aberto.svg'
                 "
                 [alt]="showPassword ? 'Olho fechado' : 'Olho aberto'"
-                width="42"
-                height="42"
-                style="
-                  background-color: var(--clr-secondary2);
-                  border-top-right-radius: 0.375rem;
-                  border-bottom-right-radius: 0.375rem;
-                "
+                width="36"
+                height="36"
+                style="background-color: var(--clr-secondary2)"
               />
             </a>
           </div>
@@ -108,13 +99,9 @@
 
         <div class="d-grid w-100">
           <button
-            class="btn"
+            class="btn text-white"
             type="submit"
-            style="
-              color: white;
-              border-color: var(--clr-primary2);
-              background-color: var(--clr-primary2);
-            "
+            style="background-color: var(--clr-primary2)"
           >
             Entrar
           </button>
