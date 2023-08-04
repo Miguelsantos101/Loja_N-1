@@ -1,0 +1,14 @@
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+app-navbar {
+  flex: 0 0 auto; /* Ocupa espaço necessário e não pode crescer nem encolher */
+}
+
+router-outlet, div {
+  flex: 1 1 auto; /* Ocupa espaço restante e pode crescer ou encolher */
+}

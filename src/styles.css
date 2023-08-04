@@ -1,12 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap'); */
 
-:root, html, body {
+:root,
+html,
+body,
+main {
   /* 1920 x 969 */
   height: 100%;
   width: 100%;
 
-  --navbar-size: 82px;
   --clr-primary: #29353c;
   --clr-primary2: #44576d;
   --clr-secondary: #768a96;
@@ -16,18 +18,17 @@
   --clr-error: #f82e2e;
 }
 
-main {
-  height: calc(100vh - var(--navbar-size));
-}
-
 * {
   /* font-family: "IM Fell DW Pica"; */
   padding: 0;
   margin: 0;
+
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+
   background-color: var(--clr-background);
 }
 
-.form-control:focus {
-  border-color: none;
-  box-shadow: none;
+* ::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
