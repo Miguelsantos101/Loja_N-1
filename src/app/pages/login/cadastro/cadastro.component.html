@@ -1,24 +1,30 @@
-<main>
-  <section class="left-side">
-    <div class="box">
+<main class="container-fluid d-xxl-flex g-0">
+  <section
+    class="container-fluid d-flex p-5"
+    style="background-color: var(--clr-primary)"
+  >
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center p-2 rounded"
+      [formGroup]="registerForm"
+      (ngSubmit)="createAccount()"
+    >
       <form
-        class="form form-group"
-        [formGroup]="registerForm"
-        (ngSubmit)="createAccount()"
+        class="d-flex flex-column justify-content-center align-items-center gap-2"
       >
-        <div>
-          <h1>Cadastro</h1>
-        </div>
+        <h1>Cadastro</h1>
 
-        <div class="flex-column">
-          <div>
-            <label class="form-label" for="name">Nome</label>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center w-100"
+        >
+          <label class="form-label" for="name"
+            >Nome
             <img
-              class="icon"
+              class="img-fluid"
               src="assets/images/Perfil.svg"
               alt="Nome"
-            />
-          </div>
+              width="32"
+              height="32"
+          /></label>
           <input
             class="form-control"
             id="name"
@@ -27,15 +33,18 @@
           />
         </div>
 
-        <div class="flex-column">
-          <div>
-            <label class="form-label" for="email">E-Mail</label>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center w-100"
+        >
+          <label class="form-label" for="email"
+            >E-Mail
             <img
-              class="icon"
+              class="img-fluid"
               src="assets/images/E-Mail.svg"
               alt="E-Mail"
-            />
-          </div>
+              width="32"
+              height="32"
+          /></label>
           <input
             class="form-control"
             id="email"
@@ -44,57 +53,64 @@
           />
         </div>
 
-        <div class="flex-column">
-          <div>
-            <label class="form-label" for="password">Senha</label>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center w-100"
+        >
+          <label class="form-label" for="password"
+            >Senha
             <img
-              class="icon"
+              class="img-fluid"
               src="assets/images/Cadeado.svg"
               alt="Senha"
-            />
-          </div>
-          <div>
+              width="32"
+              height="32"
+          /></label>
+          <div class="d-flex justify-content-center align-items-center w-100">
             <input
-              class="form-control input-password"
+              class="form-control rounded-end-0"
               id="password"
               [type]="showPassword ? 'text' : 'password'"
               formControlName="password"
             />
-            <a class="eye password" (click)="showOrHidePassword(1)">
+            <a role="button" (click)="showOrHidePassword(1)">
               <img
-                class="icon2"
+                class="rounded-end-2"
                 [src]="
                   showPassword
                     ? 'assets/images/Olho-fechado.svg'
                     : 'assets/images/Olho-aberto.svg'
                 "
                 [alt]="showPassword ? 'Olho fechado' : 'Olho aberto'"
+                width="36"
+                height="36"
+                style="background-color: var(--clr-secondary2)"
               />
             </a>
           </div>
         </div>
 
-        <div class="flex-column">
-          <div>
-            <label class="form-label" for="passwordConfirmation"
-              >Confirmar senha</label
-            >
+        <div
+          class="d-flex flex-column justify-content-center align-items-center w-100"
+        >
+          <label class="form-label" for="passwordConfirmation"
+            >Confirmar senha
             <img
-              class="icon"
+              class="img-fluid"
               src="assets/images/Chave.svg"
               alt="Confirmar senha"
-            />
-          </div>
-          <div>
+              width="32"
+              height="32"
+          /></label>
+          <div class="d-flex justify-content-center align-items-center w-100">
             <input
-              class="form-control input-password"
+              class="form-control rounded-end-0"
               id="passwordConfirmation"
               [type]="showPasswordConfirmation ? 'text' : 'password'"
               formControlName="passwordConfirmation"
             />
-            <a class="eye password" (click)="showOrHidePassword(2)">
+            <a role="button" (click)="showOrHidePassword(2)">
               <img
-                class="icon2"
+                class="rounded-end-2"
                 [src]="
                   showPasswordConfirmation
                     ? 'assets/images/Olho-fechado.svg'
@@ -103,29 +119,47 @@
                 [alt]="
                   showPasswordConfirmation ? 'Olho fechado' : 'Olho aberto'
                 "
+                width="36"
+                height="36"
+                style="background-color: var(--clr-secondary2)"
               />
             </a>
           </div>
         </div>
 
-        <div>
-          <button class="btn primary" type="submit">Criar nova conta</button>
+        <div class="d-grid w-100">
+          <button
+            class="btn text-white"
+            type="submit"
+            style="background-color: var(--clr-primary2)"
+          >
+            Criar nova conta
+          </button>
         </div>
 
-        <div class="link">
-          <p>Já possui uma conta?</p>
-          <a routerLink="/login">Clique para fazer login :)</a>
+        <div class="d-flex gap-2">
+          Já possui uma conta?
+          <a class="link-dark link-underline-dark" routerLink="/login"
+            >Clique para fazer login :)</a
+          >
         </div>
       </form>
     </div>
   </section>
 
-  <section class="right-side">
-    <div class="box">
+  <section
+    class="container-fluid d-flex p-2"
+    style="background-color: var(--clr-background)"
+  >
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center p-2 rounded"
+    >
       <img
-        class="logo"
+        class="img-fluid border border-black"
         src="assets/images/N-1_Logo_Quadrado.svg"
-        alt="N-1 Logo"
+        alt="N-1 Logo Redondo"
+        width="720"
+        height="720"
       />
     </div>
   </section>

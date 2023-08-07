@@ -8,7 +8,7 @@ describe('CadastroComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CadastroComponent]
+      declarations: [CadastroComponent],
     });
     fixture = TestBed.createComponent(CadastroComponent);
     component = fixture.componentInstance;
