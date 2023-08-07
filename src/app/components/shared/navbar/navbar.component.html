@@ -2,7 +2,7 @@
   <div class="container-fluid g-0">
     <a class="navbar-brand" routerLink="home">
       <img
-        class="img-fluid border border-dark rounded"
+        class="img-fluid border border-black rounded"
         src="assets/images/N-1_Logo.svg"
         alt="N-1 Logo"
         width="56"
@@ -73,7 +73,7 @@
           class="list-unstyled d-flex flex-lg-row flex-column justify-content-center align-items-center gap-1 m-0"
         >
           <li *ngIf="userService.loggedIn | async">
-            <a (click)="openCart()">
+            <a>
               qtd. Itens
               <img
                 class="img-fluid"

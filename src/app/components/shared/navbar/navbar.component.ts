@@ -15,8 +15,4 @@ export class NavbarComponent {
   }
 
   ngOnInit() {}
-
-  openCart() {
-    return console.log('Carrinho aberto');
-  }
 }

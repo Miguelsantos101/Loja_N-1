@@ -8,10 +8,10 @@ import { authGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'contato',
-    title: 'Contato',
-    component: ContatoComponent,
-    data: { animation: 'contato' },
+    path: 'home',
+    title: 'Loja N-1',
+    component: HomeComponent,
+    data: { animation: 'home' },
   },
   {
     path: 'pesquisar',
@@ -20,10 +20,10 @@ const routes: Routes = [
     data: { animation: 'pesquisar' },
   },
   {
-    path: 'home',
-    title: 'Loja N-1',
-    component: HomeComponent,
-    data: { animation: 'home' },
+    path: 'contato',
+    title: 'Contato',
+    component: ContatoComponent,
+    data: { animation: 'contato' },
   },
   {
     path: 'perfil',

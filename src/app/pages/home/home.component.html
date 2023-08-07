@@ -1,4 +1,6 @@
-<main class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 g-0 p-4 text-center text-white">
+<main
+  class="row row-cols-xxl-5 row-cols-xl-4 row-cols-lg-3 g-0 p-4 text-center text-white"
+>
   <div class="shopItem p-4" *ngFor="let shopItem of shopItems">
     <div class="shopItem__top">
       {{ shopItem.image }}
@@ -17,19 +19,11 @@
     <div class="shopItem__bottom">
       <div class="buttons">
         <button class="button">
-          <img
-            class="icon"
-            src="assets/images/_.svg"
-            alt="Interrogação"
-          />
+          <img class="icon" src="assets/images/_.svg" alt="Interrogação" />
           Vizualização rápida
         </button>
         <button class="button">
-          <img
-            class="icon"
-            src="assets/images/+.svg"
-            alt="Adição"
-          />
+          <img class="icon" src="assets/images/+.svg" alt="Adição" />
           Adicionar ao carrinho
         </button>
       </div>

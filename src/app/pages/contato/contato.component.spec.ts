@@ -8,7 +8,7 @@ describe('ContatoComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ContatoComponent]
+      declarations: [ContatoComponent],
     });
     fixture = TestBed.createComponent(ContatoComponent);
     component = fixture.componentInstance;
