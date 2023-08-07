@@ -1,36 +1,76 @@
-<main>
-  <section class="left-side">
-    <div class="box p-4">
-      <form class="form form-group" [formGroup]="passwordRecoveryForm" (ngSubmit)="sendEmail()">
-        <div>
-          <h1>Recuperação de senha</h1>
-        </div>
+<main class="container-fluid d-xxl-flex g-0">
+  <section
+    class="container-fluid d-flex p-5"
+    style="background-color: var(--clr-primary)"
+  >
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center p-2 rounded"
+      [formGroup]="passwordRecoveryForm"
+      (ngSubmit)="sendEmail()"
+    >
+      <form
+        class="d-flex flex-column justify-content-center align-items-center gap-2"
+      >
+        <h1>Recuperação de senha</h1>
 
         <p>
           Para recuperar sua senha, informe seu endereço de e-mail<br />
           que nós enviaremos um link para a alteração da senha.
         </p>
 
-        <div class="flex-column gap">
-          <div class="flex-column">
-            <div>
-              <label class="form-label" for="email">E-Mail</label>
-              <img class="icon" src="assets/images/E-Mail.svg" alt="E-Mail" />
-            </div>
-            <input class="form-control" id="email" type="text" formControlName="email" />
-          </div>
-          <div class="gap">
-            <a class="btn primary" routerLink="/login">Voltar</a>
-            <button class="btn primary" type="submit">Enviar</button>
-          </div>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center w-100"
+        >
+          <label class="form-label" for="email"
+            >E-Mail
+            <img
+              class="img-fluid"
+              src="assets/images/E-Mail.svg"
+              alt="E-Mail"
+              width="32"
+              height="32"
+          /></label>
+          <input
+            class="form-control"
+            id="email"
+            type="text"
+            formControlName="email"
+          />
+        </div>
+
+        <div class="d-flex gap-4 w-100">
+          <a
+            class="btn text-white w-100"
+            routerLink="/login"
+            style="background-color: var(--clr-primary2)"
+          >
+            Voltar
+          </a>
+          <button
+            class="btn text-white w-100"
+            type="submit"
+            style="background-color: var(--clr-primary2)"
+          >
+            Enviar
+          </button>
         </div>
       </form>
     </div>
   </section>
-
-  <section class="right-side">
-    <div class="box">
-      <img class="logo" src="assets/images/N-1_Logo_Quadrado.svg" alt="N-1 Logo Quadrado" />
+  <section
+    class="container-fluid d-flex p-2"
+    style="background-color: var(--clr-background)"
+  >
+    <div
+      class="container-fluid d-flex justify-content-center align-items-center p-2 rounded"
+    >
+      <img
+        class="img-fluid border border-black"
+        src="assets/images/N-1_Logo_Quadrado.svg"
+        alt="N-1 Logo Quadrado"
+        width="720"
+        height="720"
+      />
     </div>
   </section>
 </main>
