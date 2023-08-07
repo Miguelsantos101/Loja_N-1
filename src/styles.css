@@ -19,7 +19,8 @@ main {
 }
 
 * {
-  /* font-family: "IM Fell DW Pica"; */
+  /* font-family: "IM Fell DW Pica";
+  font-style: italic; */
   padding: 0;
   margin: 0;
 
