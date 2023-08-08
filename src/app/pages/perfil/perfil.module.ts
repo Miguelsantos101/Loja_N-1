@@ -5,8 +5,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PerfilComponent } from './perfil.component';
 import { InfomacoesComponent } from './infomacoes/infomacoes.component';
 import { MudarSenhaComponent } from './mudar-senha/mudar-senha.component';
-import { PerfilRoutingModule } from './perfil-routing.module';
 import { AlterarInfomacoesComponent } from './alterar-infomacoes/alterar-infomacoes.component';
+import { PerfilRoutingModule } from './perfil-routing.module';
 
 @NgModule({
   declarations: [

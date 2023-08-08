@@ -1,52 +1,49 @@
-<main>
-  <div class="perfil py-5">
-    <div class="d-flex mx-auto box">
-      <div class="row row-primary">
-        <div class="col col-3 my-auto">
-          <div class="row">
-            <div class="col col-12 d-flex">
-              <img
-                src="assets/images/Perfil.svg"
-                alt="Imagem Perfil"
-                class="mx-auto"
-                width="300px"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col col-12 d-flex">
-              <a class="mx-auto action" routerLink="informacoes">Informações</a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col col-12 d-flex">
-              <a class="mx-auto action" routerLink="alterar-informacoes"
-                >Alterar Informações</a
-              >
-            </div>
-          </div>
-          <div class="row">
-            <div class="col col-12 d-flex">
-              <a class="mx-auto action" routerLink="mudar-senha"
-                >Trocar senha</a
-              >
-            </div>
-          </div>
-          <div class="row">
-            <div class="col col-12 d-flex">
-              <a class="mx-auto action">Deletar conta</a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col col-12 d-flex">
-              <a class="mx-auto action" (click)="userService.logOut()">Sair</a>
-            </div>
-          </div>
+<main class="container-fluid row justify-content-center g-0 p-lg-5 p-3 bg-secondary2">
+  <section class="container-fluid row justify-content-center">
+    <div
+      class="row flex-lg-row flex-column flex-nowrap justify-content-center align-content-center align-items-center fs-2 gap-2 p-lg-2"
+    >
+      <div class="col col-lg-3 text-center">
+        <div class="col col-lg-12">
+          <img
+            class="img-fluid"
+            src="assets/images/Perfil.svg"
+            alt="Imagem Perfil"
+            width="200"
+            height="200"
+          />
         </div>
-        <div class="col col-9 my-auto">
-          <router-outlet></router-outlet>
+        <div class="col col-lg-12">
+          <a class="link-dark link-underline-dark" routerLink="informacoes"
+            >Informações</a
+          >
+        </div>
+        <div class="col col-lg-12">
+          <a
+            class="link-dark link-underline-dark"
+            routerLink="alterar-informacoes"
+            >Alterar Informações</a
+          >
+        </div>
+        <div class="col col-lg-12">
+          <a class="link-dark link-underline-dark" routerLink="mudar-senha"
+            >Trocar senha</a
+          >
+        </div>
+        <div class="col col-lg-12">
+          <a class="link-dark link-underline-dark">Deletar conta</a>
+        </div>
+        <div class="col col-lg-12">
+          <a
+            class="link-dark link-underline-dark"
+            (click)="userService.logOut()"
+            >Sair</a
+          >
         </div>
       </div>
+      <div class="col col-lg-9 text-start">
+        <router-outlet></router-outlet>
+      </div>
     </div>
-  </div>
+  </section>
 </main>
