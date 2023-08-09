@@ -34,6 +34,6 @@ main {
   display: none; /* Safari and Chrome */
 }
 
-.bg-secondary2 * :not(input, button) {
+.bg-secondary2 *:not(input, button) {
   background-color: var(--clr-secondary2);
 }
